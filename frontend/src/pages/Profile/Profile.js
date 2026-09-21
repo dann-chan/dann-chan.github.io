@@ -59,7 +59,7 @@ const ProfileTemplate = () => {
         <div className="header-info">
           <h1>{profileData.name}</h1>
           <h2>{profileData.title}</h2>
-          <h3>{profileData.contact}</h3>
+          <h6>{profileData.contact}</h6>
           <p className="location">{profileData.location}</p>
         </div>
       </header>
