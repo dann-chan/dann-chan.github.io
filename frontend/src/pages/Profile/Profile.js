@@ -6,12 +6,12 @@ const ProfileTemplate = () => {
   
   const profileData = {
     name: "Homer J. Simpson",
-    title: "Safety Inspector & Nuclear Technician",
-    location: "Springfield, USA",
-    avatar: "https://unsplash.com", // Placeholder asset
-    bio: "Experienced Safety Inspector with a demonstrated history of overlooking critical system alerts at the Springfield Nuclear Power Plant. Skilled in crisis mitigation (accidental), donut inventory control, and couch testing. Known for a highly relaxed operational philosophy.",
+    title: "Senior Solutions Architect & Senior Program Manager,",
+    location: "Toronto, Canada",
+    avatar: "https://unsplash.com",
+    bio: "5 years of specialized experience strategizing enterprise AI initiatives, secure major fundings, and gaining high-level executive recognition. Historically notable for designing and deploying the premier AI forecasting infrastructure for Bell's CCaaS. Proven adept at managing capital budgets and leading cross-functional engineering teams to deliver complex, multi-million dollar software projects.",
     
-    skills: ["Nuclear Safety (Basic)", "Donut Quality Assurance", "Crisis Mitigation", "Nap Optimization", "Catchphrase Delivery (D'oh!)"],
+    skills: [ "Technical Product Management", "Cross-functional Leadership", "Sprint Planning & Roadmapping", "Crisis Mitigation & Risk Management", "Agile & Scrum Methodologies", "Full Stack Development", "Frontend (React & Next.js)", "Backend (Node.js & Python)", "Databases (SQL, MongoDB)", "Cloud & DevOps (AWS, Docker, Git)", "System Architecture","API Design & Integration", ],
     
     experience: [
       {
