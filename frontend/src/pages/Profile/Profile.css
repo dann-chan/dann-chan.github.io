@@ -55,9 +55,9 @@ body {
   color: var(--text-secondary);
 }
 
-.header-info h3 {
+.header-info h6 {
   margin: 0 0 8px 0;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--text-secondary);
 }
