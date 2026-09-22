@@ -61,9 +61,6 @@ const ProfileTemplate = () => {
           <h2>{profileData.title}</h2>
           <p className="location">{profileData.location}</p>
         </div>
-        <div className="contact-info">
-          <h6>{profileData.contact}</h6>
-        </div>
       </header>
 
       {/* Main Content Layout */}
