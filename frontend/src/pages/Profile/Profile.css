@@ -61,6 +61,52 @@ body {
   color: var(--text-secondary);
 }
 
+/* Contact Bar Styles */
+.profile-contact {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px 30px; /* Aligns with the 30px side padding of the header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap; /* Prevents overflow issues on smaller smartphone screens */
+}
+
+.contact-item {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.contact-item a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.contact-divider {
+  color: var(--text-secondary);
+  font-weight: bold;
+  user-select: none; /* Prevents selecting the dots when highlighting text */
+}
+
+/* Responsive adjustment for clean mobile stacking */
+@media (max-width: 768px) {
+  .profile-contact {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  .contact-divider {
+    display: none; /* Hides the bullet dots on mobile as it changes to a clean list stack */
+  }
+}
+
 /* Two-Column Body Layout */
 .profile-body {
   display: grid;
