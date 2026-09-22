@@ -8,7 +8,6 @@ const ProfileTemplate = () => {
     name: "Homer J. Simpson",
     title: "Senior Solutions Architect & Senior Program Manager",
     location: "Toronto, Canada",
-    contact: "Email: chan.danny@hotmail.com, Phone: 647-239-1036, Linkedin: https://kr.linkedin.com/in/cmydanny, Web: https://dann-chan.github.io",
     avatar: "https://unsplash.com",
     bio: "5 years of specialized experience strategizing enterprise AI initiatives, secure major fundings, and gaining high-level executive recognition. Historically notable for designing and deploying the premier AI forecasting infrastructure for Bell's CCaaS. Proven adept at managing capital budgets and leading cross-functional engineering teams to deliver complex, multi-million dollar software projects.",
     
@@ -70,7 +69,7 @@ const ProfileTemplate = () => {
         <span className="contact-item"><strong>Phone:</strong> 416-999-9999</span>
         <span className="contact-divider">•</span>
         <span className="contact-item">
-          <strong>Web:</strong> <a href="https://github.io" target="_blank" rel="noreferrer">dann-chan.github.io</a>
+          <strong>Web:</strong> <a href="https://dann-chan.github.io" target="_blank" rel="noreferrer">dann-chan.github.io</a>
         </span>
       </section>
 
