@@ -8,7 +8,7 @@ const ProfileTemplate = () => {
     name: "Homer J. Simpson",
     title: "Senior Solutions Architect & Senior Program Manager",
     location: "Toronto, Canada",
-    avatar: "https://1drv.ms/i/c/3bb4dc98896970fa/IQA2hU-U9W3TQo4xcdaV_gBQARYtcJz1P2-nyTQg3DCKQJs?e=AHEMuV",
+    avatar: "https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E",
     bio: "5 years of specialized experience strategizing enterprise AI initiatives, secure major fundings, and gaining high-level executive recognition. Historically notable for designing and deploying the premier AI forecasting infrastructure for Bell's CCaaS. Proven adept at managing capital budgets and leading cross-functional engineering teams to deliver complex, multi-million dollar software projects.",
     
     skills: [ "Technical Product Management", "Cross-functional Leadership", "Sprint Planning & Roadmapping", "Crisis Mitigation & Risk Management", "Agile & Scrum Methodologies", "Full Stack Development", "Frontend (React & Next.js)", "Backend (Node.js & Python)", "Databases (SQL, MongoDB)", "Cloud & DevOps (AWS, Docker, Git)", "System Architecture","API Design & Integration", ],
