@@ -59,7 +59,6 @@ const ProfileTemplate = () => {
         <div className="header-info">
           <h1>{profileData.name}</h1>
           <h2>{profileData.title}</h2>
-          <h6>{profileData.contact}</h6>
           <p className="location">{profileData.location}</p>
         </div>
         <div className="contact-info">
