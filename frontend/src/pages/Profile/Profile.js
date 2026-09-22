@@ -63,6 +63,17 @@ const ProfileTemplate = () => {
         </div>
       </header>
 
+     {/*  Center-Aligned Contact Bar Section */}
+      <section className="profile-contact">
+        <span className="contact-item"><strong>Email:</strong> john.doe@gmail.com</span>
+        <span className="contact-divider">•</span>
+        <span className="contact-item"><strong>Phone:</strong> 416-999-9999</span>
+        <span className="contact-divider">•</span>
+        <span className="contact-item">
+          <strong>Web:</strong> <a href="https://github.io" target="_blank" rel="noreferrer">dann-chan.github.io</a>
+        </span>
+      </section>
+
       {/* Main Content Layout */}
       <div className="profile-body">
         {/* Left Side: About & Experience */}
