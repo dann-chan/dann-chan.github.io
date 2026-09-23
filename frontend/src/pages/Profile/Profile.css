@@ -156,7 +156,6 @@ body {
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-bottom: 20px; /* Separates header card from contact ribbon card cleanly */
 }
 
 .avatar-layout-group {
@@ -203,7 +202,6 @@ body {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 20px; /* Separates contact ribbon card from primary information block */
 }
 
 .contact-item {
