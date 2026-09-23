@@ -15,7 +15,7 @@ const loginAttempts = {};
 const MAX_ATTEMPTS = 3;
 const LOCKOUT_TIME = 5 * 60 * 1000; 
 
-// 🔐 MIDDLEWARE: Verify the JWT token before serving data
+// Verify the JWT token before serving data
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1]; // Extract token from "Bearer <token>"
@@ -33,14 +33,14 @@ const authenticateToken = (req, res, next) => {
   });
 };
 
-// 🔓 NEW PROTECTED ROUTE: Resolves your 404 error
+// Resolves your 404 error
 app.get('/api/protected-data', authenticateToken, (req, res) => {
   // Replace this object with whatever content Danny's profile needs
   return res.json({
     success: true,
     secretContent: {
-      bio: "Welcome to Danny's private profile!",
-      email: "danny@example.com",
+      bio: "Male",
+      email: "danny.chan@hotmail.com",
       privateNote: "This data is securely pulled from the backend using a valid JWT."
     }
   });
