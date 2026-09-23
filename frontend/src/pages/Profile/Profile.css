@@ -1,3 +1,5 @@
+/* frontend/src/pages/Profile/Profile.css */
+
 /*:root {
   --bg-color: #f3f2ef; /* LinkedIn-style light grey 
   --card-bg: #ffffff;
@@ -6,8 +8,6 @@
   --accent-color: #0a66c2; /* LinkedIn Blue 
   --border-color: #e0e0e0;
 } */
-/* frontend/src/pages/Profile/Profile.css */
-/* frontend/src/pages/Profile/Profile.css */
 
 :root {
   --bg-color: #0d1117;       
@@ -28,12 +28,14 @@ body {
   padding: 0;                
 }
 
+/* --- DASHBOARD GRID SHELL --- */
 .app-workspace-layout {
   display: flex;
   min-height: 100vh;
   width: 100%;
 }
 
+/* --- NAVIGATION SIDEBAR PANEL --- */
 .app-navigation-sidebar {
   width: var(--sidebar-width);
   background-color: var(--card-bg);
@@ -109,6 +111,7 @@ body {
   color: #ffffff;
 }
 
+/* --- MAIN WORKING CANVAS FRAME --- */
 .app-content-viewframe {
   flex-grow: 1;
   margin-left: var(--sidebar-width); 
@@ -125,6 +128,7 @@ body {
   gap: 20px;
 }
 
+/* --- TAB PLACEHOLDER LAYOUTS (Resume & Projects) --- */
 .tab-placeholder-view {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -143,6 +147,7 @@ body {
   color: var(--text-secondary);
 }
 
+/* --- BIOGRAPHY TAB CORE BLOCKS --- */
 .profile-header {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -151,7 +156,7 @@ body {
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px; /* Separates header card from contact ribbon card cleanly */
 }
 
 .avatar-layout-group {
@@ -198,7 +203,7 @@ body {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 20px; /* ✨ NEW: Creates uniform spacing between Contact bar and About card */
+  margin-bottom: 20px; /* Separates contact ribbon card from primary information block */
 }
 
 .contact-item {
@@ -222,6 +227,7 @@ body {
   user-select: none;
 }
 
+/* --- INFORMATION BODY GRID --- */
 .profile-body {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -251,6 +257,7 @@ body {
   font-size: 15px;
 }
 
+/* --- EXPERIENCE & EDUCATION INNER ITEMS --- */
 .experience-item, .education-item {
   margin-bottom: 20px;
 }
@@ -290,6 +297,7 @@ body {
   line-height: 1.5;
 }
 
+/* --- SKILLS TAG CLOUD --- */
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
@@ -306,6 +314,7 @@ body {
   border: 1px solid var(--border-color);
 }
 
+/* --- RESPONSIVE MOBILE OVERRIDES --- */
 @media (max-width: 768px) {
   .app-workspace-layout {
     flex-direction: column;
@@ -356,4 +365,3 @@ body {
     display: none;
   }
 }
-
