@@ -1,4 +1,4 @@
-// frontend/src/pages/Profile/Resume.jsx
+// frontend/src/pages/Profile/biography.jsx
 import React from 'react';
 
 const BiographyTab = () => {
