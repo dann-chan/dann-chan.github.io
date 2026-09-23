@@ -10,11 +10,11 @@ const ProfilePage = ({ secretData, onLogout }) => {
 
   const renderMainContent = () => {
     switch (activeTab) {
-      case 'resume':
-        return <ResumeTab />;
+      case 'biography':
+        return <BiographyTab />;
       case 'projects':
         return <ProjectsTab />;
-      case 'biography':
+      case 'resume':
       default:
         return <ResumeTab secretData={secretData} />;
     }
