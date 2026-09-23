@@ -1,0 +1,63 @@
+// frontend/src/pages/Profile/Profile.jsx
+import React, { useState } from 'react';
+import BiographyTab from './Biography';
+import ResumeTab from './Resume';
+import ProjectsTab from './Projects';
+import './Profile.css';
+
+const ProfilePage = ({ secretData, onLogout }) => {
+  const [activeTab, setActiveTab] = useState('biography');
+
+  const renderMainContent = () => {
+    switch (activeTab) {
+      case 'resume':
+        return <ResumeTab />;
+      case 'projects':
+        return <ProjectsTab />;
+      case 'biography':
+      default:
+        return <BiographyTab secretData={secretData} />;
+    }
+  };
+
+  return (
+    <div className="app-workspace-layout">
+      <nav className="app-navigation-sidebar">
+        <div className="sidebar-brand-title">
+          <h3>Menu Panel</h3>
+        </div>
+        
+        <div className="sidebar-links-group">
+          <button 
+            className={`sidebar-nav-btn ${activeTab === 'biography' ? 'active' : ''}`}
+            onClick={() => setActiveTab('biography')}
+          >
+            📋 Biography
+          </button>
+          <button 
+            className={`sidebar-nav-btn ${activeTab === 'resume' ? 'active' : ''}`}
+            onClick={() => setActiveTab('resume')}
+          >
+            📄 Resume
+          </button>
+          <button 
+            className={`sidebar-nav-btn ${activeTab === 'projects' ? 'active' : ''}`}
+            onClick={() => setActiveTab('projects')}
+          >
+            💻 Projects
+          </button>
+        </div>
+
+        <button className="sidebar-logout-btn" onClick={onLogout}>
+          Secure Sign Out
+        </button>
+      </nav>
+
+      <div className="app-content-viewframe">
+        {renderMainContent()}
+      </div>
+    </div>
+  );
+};
+
+export default ProfilePage;
