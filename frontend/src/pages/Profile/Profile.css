@@ -7,6 +7,7 @@
   --border-color: #e0e0e0;
 } */
 /* frontend/src/pages/Profile/Profile.css */
+/* frontend/src/pages/Profile/Profile.css */
 
 :root {
   --bg-color: #0d1117;       
@@ -15,25 +16,24 @@
   --text-secondary: #8b949e; 
   --accent-color: #58a6ff;   
   --border-color: #30363d;   
-  --sidebar-width: 240px;
+  --sidebar-width: 240px;    
   
-  color-scheme: dark; 
+  color-scheme: dark;        
 }
 
 body {
   background-color: var(--bg-color);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
-  padding: 0; 
+  padding: 0;                
+}
 
-/* Split Grid Dashboard Frame Wrapper */
 .app-workspace-layout {
   display: flex;
   min-height: 100vh;
   width: 100%;
 }
 
-/* Sidebar Component Shell */
 .app-navigation-sidebar {
   width: var(--sidebar-width);
   background-color: var(--card-bg);
@@ -42,7 +42,7 @@ body {
   flex-direction: column;
   padding: 24px 16px;
   box-sizing: border-box;
-  position: fixed; 
+  position: fixed;           
   top: 0;
   bottom: 0;
   left: 0;
@@ -62,10 +62,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex-grow: 1;
+  flex-grow: 1;              
 }
 
-/* Individual Sidebar Navigation Items */
 .sidebar-nav-btn {
   background: none;
   border: none;
@@ -85,14 +84,12 @@ body {
   color: var(--text-primary);
 }
 
-/* Focused active menu option style matching your theme link accent color */
 .sidebar-nav-btn.active {
   background-color: rgba(88, 166, 255, 0.15);
   color: var(--accent-color);
   font-weight: 600;
 }
 
-/* Secure Logout Button styled to match your dark layout nicely */
 .sidebar-logout-btn {
   background-color: rgba(218, 54, 55, 0.1);
   color: #da3637;
@@ -104,7 +101,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   width: 100%;
-  margin-top: auto;
+  margin-top: auto;          
 }
 
 .sidebar-logout-btn:hover {
@@ -112,7 +109,6 @@ body {
   color: #ffffff;
 }
 
-/* Main Viewing Frame Canvas Window sitting on the right side */
 .app-content-viewframe {
   flex-grow: 1;
   margin-left: var(--sidebar-width); 
@@ -129,7 +125,6 @@ body {
   gap: 20px;
 }
 
-/* Standard Layout Placeholders for Resume & Project Tabs */
 .tab-placeholder-view {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -148,7 +143,6 @@ body {
   color: var(--text-secondary);
 }
 
-/* --- Core Profiles Formatting Blocks (Maintained from your clean baseline) --- */
 .profile-header {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -310,7 +304,6 @@ body {
   border: 1px solid var(--border-color);
 }
 
-/* Responsive configurations for unified mobile display structures */
 @media (max-width: 768px) {
   .app-workspace-layout {
     flex-direction: column;
@@ -361,3 +354,4 @@ body {
     display: none;
   }
 }
+
