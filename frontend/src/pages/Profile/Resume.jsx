@@ -126,4 +126,4 @@ const Resumetab = ({ secretData }) => {
   );
 };
 
-export default ResumeTab;
+export default Resumetab;
