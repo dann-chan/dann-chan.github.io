@@ -72,7 +72,7 @@ const ResumeTab = ({ secretData }) => {
         <span className="contact-item"><strong>Phone:</strong> 647-239-1036</span>
         <span className="contact-divider">•</span>
         <span className="contact-item">
-          <strong>Web:</strong> <a href="https://github.io" target="_blank" rel="noreferrer">dann-chan.github.io</a>
+          <strong>Web:</strong> <a href="https://dann-chan.github.io" target="_blank" rel="noreferrer">dann-chan.github.io</a>
         </span>
       </section>
 
