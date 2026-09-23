@@ -24,7 +24,7 @@ const ProfilePage = ({ secretData, onLogout }) => {
     <div className="app-workspace-layout">
       <nav className="app-navigation-sidebar">
         <div className="sidebar-brand-title">
-          <h3>Menu Panel</h3>
+          <h3>Danny's Profile</h3>
         </div>
         
         <div className="sidebar-links-group">
