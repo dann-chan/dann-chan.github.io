@@ -1,7 +1,7 @@
 // frontend/src/pages/Profile/resume.jsx
 import React from 'react';
 
-const Resumetab = ({ secretData }) => {
+const ResumeTab = ({ secretData }) => {
   const profileData = {
     name: "Danny Chan",
     title: "Senior Technical Product Manager & Solutions Architect",
@@ -126,4 +126,4 @@ const Resumetab = ({ secretData }) => {
   );
 };
 
-export default Resumetab;
+export default ResumeTab;
