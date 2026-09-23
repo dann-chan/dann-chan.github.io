@@ -1,6 +1,6 @@
 // frontend/src/pages/LockedPage/LockedPage.jsx
 import React, { useState, useEffect } from 'react';
-import ProfilePage from '../Profile/Profile'; 
+import ProfilePage from '../Profile/Profile.jsx'; 
 import './LockedPage.css'; 
 
 export default function LockedPage() {
