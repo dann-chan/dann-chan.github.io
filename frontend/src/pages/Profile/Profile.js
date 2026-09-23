@@ -1,49 +1,43 @@
+// frontend/src/pages/Profile/Profile.jsx
 import React from 'react';
 import './Profile.css';
 
-const ProfileTemplate = () => {
-  // Static profile data
+const ProfilePage = ({ secretData, onLogout }) => {
   
   const profileData = {
-    name: "Homer J. Simpson",
-    title: "Senior Solutions Architect & Senior Program Manager",
+    name: "Danny Chan",
+    title: "Senior Technical Product Manager & Solutions Architect",
     location: "Toronto, Canada",
     avatar: "https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E",
-    bio: "5 years of specialized experience strategizing enterprise AI initiatives, secure major fundings, and gaining high-level executive recognition. Historically notable for designing and deploying the premier AI forecasting infrastructure for Bell's CCaaS. Proven adept at managing capital budgets and leading cross-functional engineering teams to deliver complex, multi-million dollar software projects.",
+    bio: secretData?.bio || "5 years of specialized experience strategizing enterprise AI initiatives, securing major fundings, and gaining high-level executive recognition. Historically notable for designing and deploying the premier AI forecasting infrastructure for Bell's CCaaS. Proven adept at managing capital budgets and leading cross-functional engineering teams to deliver complex, multi-million dollar software projects.",
     
-    skills: [ "Technical Product Management", "Cross-functional Leadership", "Sprint Planning & Roadmapping", "Crisis Mitigation & Risk Management", "Agile & Scrum Methodologies", "Full Stack Development", "Frontend (React & Next.js)", "Backend (Node.js & Python)", "Databases (SQL, MongoDB)", "Cloud & DevOps (AWS, Docker, Git)", "System Architecture","API Design & Integration", ],
+    skills: [ 
+      "Technical Product Management", "Cross-functional Leadership", "Sprint Planning & Roadmapping", 
+      "Crisis Mitigation & Risk Management", "Agile & Scrum Methodologies", "Full Stack Development", 
+      "Frontend (React & Next.js)", "Backend (Node.js & Python)", "Databases (SQL, MongoDB)", 
+      "Cloud & DevOps (AWS, Docker, Git)", "System Architecture", "API Design & Integration"
+    ],
     
     experience: [
       {
-        role: "Safety Inspector",
-        company: "Springfield Nuclear Power Plant",
-        period: "1989 - Present",
-        description: "Responsible for monitoring Core Sector 7-G. Successfully survived multiple core meltdowns while maintaining a consistent nap schedule. Handled indicator lights and alarm silences."
+        role: "Senior Solutions Architect & Program Manager",
+        company: "Enterprise AI Infrastructure Group (Bell CCaaS Project)",
+        period: "2021 - Present",
+        description: "Designed, tested, and deployed premier predictive artificial intelligence forecasting systems. Championed technical roadmaps and coordinated cross-functional engineering teams to complete multi-million dollar software rollouts."
       },
       {
-        role: "Lead Singer & Songwriter",
-        company: "The Beasharps (Barbershop Quartet)",
-        period: "1993",
-        description: "Achieved global musical fame, won a Grammy Award, and spearheaded a chart-topping album before retiring back to the nuclear industry."
-      },
-      {
-        role: "Astronaut",
-        company: "NASA",
-        period: "1994",
-        description: "Selected for the civilian space flight program. Successfully orbited Earth, introduced an experimental space-ant colony, and secured an inanimate carbon rod."
+        role: "Technical Product Manager",
+        company: "Solutions Contracting & Software Management",
+        period: "2019 - 2021",
+        description: "Managed full lifecycle development structures, maintained capital budgets, coordinated scrum ceremonies, and acted as an executive bridge for business requirements."
       }
     ],
     
     education: [
       {
-        degree: "Nuclear Physics Crash Course",
-        school: "Springfield University",
-        year: "1993"
-      },
-      {
-        degree: "High School Diploma",
-        school: "Springfield High School",
-        year: "1974"
+        degree: "Bachelor of Science / Technical Specialization",
+        school: "University Ecosystem",
+        year: "Graduated"
       }
     ]
   };
@@ -52,21 +46,28 @@ const ProfileTemplate = () => {
     <div className="profile-container">
       {/* Top Header Section */}
       <header className="profile-header">
-        <div className="avatar-wrapper">
-          <img src={profileData.avatar} alt={profileData.name} className="profile-avatar" />
+        <div className="avatar-layout-group">
+          <div className="avatar-wrapper">
+            <img src={profileData.avatar} alt={profileData.name} className="profile-avatar" />
+          </div>
+          <div className="header-info">
+            <h1>{profileData.name}</h1>
+            <h2>{profileData.title}</h2>
+            <p className="location">📍 {profileData.location}</p>
+          </div>
         </div>
-        <div className="header-info">
-          <h1>{profileData.name}</h1>
-          <h2>{profileData.title}</h2>
-          <p className="location">{profileData.location}</p>
-        </div>
+        
+        {/* 🚪 Secure Logout Action Trigger */}
+        <button className="profile-logout-btn" onClick={onLogout}>
+          Secure Sign Out
+        </button>
       </header>
 
-     {/*  Center-Aligned Contact Bar Section */}
+      {/* Center-Aligned Contact Bar Section */}
       <section className="profile-contact">
-        <span className="contact-item"><strong>Email:</strong> john.doe@gmail.com</span>
+        <span className="contact-item"><strong>Email:</strong> chan.danny@hotmail.com</span>
         <span className="contact-divider">•</span>
-        <span className="contact-item"><strong>Phone:</strong> 416-999-9999</span>
+        <span className="contact-item"><strong>Phone:</strong> 647-239-1036</span>
         <span className="contact-divider">•</span>
         <span className="contact-item">
           <strong>Web:</strong> <a href="https://dann-chan.github.io" target="_blank" rel="noreferrer">dann-chan.github.io</a>
@@ -126,4 +127,4 @@ const ProfileTemplate = () => {
   );
 };
 
-export default ProfileTemplate;
+export default ProfilePage;
