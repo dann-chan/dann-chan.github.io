@@ -6,7 +6,7 @@ import ProjectsTab from './Projects';
 import './Profile.css';
 
 const ProfilePage = ({ secretData, onLogout }) => {
-  const [activeTab, setActiveTab] = useState('biography');
+  const [activeTab, setActiveTab] = useState('Resume');
 
   const renderMainContent = () => {
     switch (activeTab) {
@@ -16,7 +16,7 @@ const ProfilePage = ({ secretData, onLogout }) => {
         return <ProjectsTab />;
       case 'biography':
       default:
-        return <BiographyTab secretData={secretData} />;
+        return <ResumeTab secretData={secretData} />;
     }
   };
 
