@@ -151,6 +151,7 @@ body {
   display: flex;
   align-items: center;
   gap: 30px;
+  margin-bottom: 20px; 
 }
 
 .avatar-layout-group {
@@ -197,6 +198,7 @@ body {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
+  margin-bottom: 20px; /* ✨ NEW: Creates uniform spacing between Contact bar and About card */
 }
 
 .contact-item {
