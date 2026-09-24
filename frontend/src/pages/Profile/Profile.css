@@ -274,7 +274,7 @@ body {
   margin: 0 0 6px 0;
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--accent-color);
 }
 
 .item-date {
@@ -308,7 +308,7 @@ body {
   margin: 0 0 14px 0;
   font-size: 15px;
   font-weight: 700;
-  color: var(--accent-color); 
+  color: var(--text-primary); 
   text-transform: uppercase;
   letter-spacing: 0.75px;
 }
