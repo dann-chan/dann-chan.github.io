@@ -18,10 +18,14 @@ const ResumeTab = ({ secretData }) => {
     
     experience: [ 
       { 
-        role: "Safety Inspector", 
-        company: "Springfield Nuclear Power Plant", 
-        period: "1989 - Present", 
-        description: "Responsible for monitoring Core Sector 7-G. Successfully survived multiple core meltdowns while maintaining a consistent nap schedule. Handled indicator lights and alarm silences."
+        role2: "Senior Solutions Architect", 
+        company2: "Bell Canada", 
+        period2: "2023 - 2026", 
+        description2: "•	Process Engineer – System Integration & Design, CMO & FMO mapping, Operation Workflows •	Program Manager – Budget & Funding Management, AI Strategic Initiative Planning •	Network & Security Architecture – SDWAN, DDoS & Firewall Solutioning",
+        role: "Senior Developer, Full Stack", 
+        company: "Bell Canada", 
+        period: "2017 - 2023", 
+        description: "•	SQL Developer– MSSQL, Oracle, PostgreSQL •	SQL Server Administrator –MSSQL Server MLS integrated AI LLM (via Python) •	RPA - Automate BPA, Blue Prism, Automation Anywhere •	Data Analyst – AI Forecast Reporting"
       }, 
       { 
         role: "Lead Singer & Songwriter", 
