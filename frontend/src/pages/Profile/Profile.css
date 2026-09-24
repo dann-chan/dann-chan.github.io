@@ -295,6 +295,40 @@ body {
   line-height: 1.5;
 }
 
+.company-main-title {
+  margin: 0 0 14px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent-color); 
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+
+.multi-role-item {
+  margin-bottom: 24px;
+  padding-left: 14px;
+  border-left: 2px solid var(--border-color); 
+}
+
+.multi-role-item:last-child {
+  margin-bottom: 0;
+}
+
+.multi-role-item .item-header h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary); 
+  margin: 0 0 6px 0;
+}
+
+.multi-role-item p {
+  color: var(--text-secondary); 
+  line-height: 1.6;
+  font-size: 14px;
+  margin: 0;
+}
+
+
 /* --- SKILLS TAG CLOUD --- */
 .skills-tags {
   display: flex;
