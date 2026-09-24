@@ -306,8 +306,7 @@ body {
 
 .multi-role-item {
   margin-bottom: 24px;
-  padding-left: 14px;
-  border-left: 2px solid var(--border-color); 
+  padding-left: 0px;
 }
 
 .multi-role-item:last-child {
@@ -328,6 +327,10 @@ body {
   margin: 0;
 }
 
+.company-group-block .multi-role-item:not(:only-child) {
+  padding-left: 14px;
+  border-left: 2px solid var(--border-color);
+}
 
 /* --- SKILLS TAG CLOUD --- */
 .skills-tags {
