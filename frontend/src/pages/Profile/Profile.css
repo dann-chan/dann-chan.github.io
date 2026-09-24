@@ -256,13 +256,11 @@ body {
 }
 
 /* --- EXPERIENCE & EDUCATION INNER ITEMS --- */
-.experience-item, .multi-role-item {
+.experience-item {
   margin-bottom: 24px;
-  padding-left: 0 !important;
-  border-left: none !important;
 }
 
-.experience-item:last-child, .education-item:last-child {
+.experience-item:last-child {
   margin-bottom: 0;
 }
 
@@ -273,8 +271,9 @@ body {
 }
 
 .item-header h4 {
-  margin: 0;
-  font-size: 16px;
+  margin: 0 0 6px 0;
+  font-size: 17px;
+  font-weight: 600;
   color: var(--text-primary);
 }
 
@@ -294,7 +293,15 @@ body {
   margin: 0;
   font-size: 14px;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.company-group-block {
+  margin-bottom: 28px;
+}
+
+.company-group-block:last-child {
+  margin-bottom: 0;
 }
 
 .company-main-title {
@@ -306,32 +313,26 @@ body {
   letter-spacing: 0.75px;
 }
 
-.multi-role-item {
-  margin-bottom: 24px;
-  padding-left: 0px;
+
+.company-group-block .experience-item + .experience-item {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border-color);
 }
 
-.multi-role-item:last-child {
+/* --- EDUCATION MAIN TRACKS --- */
+.education-item {
+  margin-bottom: 20px;
+}
+
+.education-item:last-child {
   margin-bottom: 0;
 }
 
-.multi-role-item .item-header h4 {
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--text-primary); 
-  margin: 0 0 6px 0;
-}
-
-.multi-role-item p {
-  color: var(--text-secondary); 
-  line-height: 1.6;
-  font-size: 14px;
+.education-item h4 {
   margin: 0;
-}
-
-.company-group-block .multi-role-item:not(:only-child) {
-  padding-left: 14px !important;
-  border-left: 2px solid var(--border-color) !important;
+  font-size: 16px;
+  color: var(--text-primary);
 }
 
 /* --- SKILLS TAG CLOUD --- */
