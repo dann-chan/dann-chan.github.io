@@ -10,8 +10,8 @@ export default function LockedPage() {
   const [error, setError] = useState('');
   const [isLockedOut, setIsLockedOut] = useState(false); 
   const [countdown, setCountdown] = useState(0); 
-  const [isLoading, setIsLoading] = useState(false); // ⏳ Tracks active server checking state
-  const [showPassword, setShowPassword] = useState(false); // 👁️ Tracks show/hide visibility toggle
+  const [isLoading, setIsLoading] = useState(false); 
+  const [showPassword, setShowPassword] = useState(false); 
 
   // Automatically check for a valid session token on load/refresh
   useEffect(() => {
@@ -28,10 +28,16 @@ export default function LockedPage() {
         sessionStorage.removeItem('page_token');
         setToken('');
       });
+    } else {
+      // Send a wake-up ping immediately
+      fetch('https://project-pvnd.onrender.com/api/protected-data')
+        .then(res => res.json())
+        .then(data => console.log('Backend server initialized:', data.status))
+        .catch(err => console.log('Backend wake-up ping initiated...'));
     }
   }, [token]);
-
-  // ⏱️ Handle the visual lockout countdown timer
+  
+  // Handle the visual lockout countdown timer
   useEffect(() => {
     if (countdown <= 0) {
       setIsLockedOut(false);
