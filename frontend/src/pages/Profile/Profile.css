@@ -256,8 +256,10 @@ body {
 }
 
 /* --- EXPERIENCE & EDUCATION INNER ITEMS --- */
-.experience-item, .education-item {
-  margin-bottom: 20px;
+.experience-item, .multi-role-item {
+  margin-bottom: 24px;
+  padding-left: 0 !important;
+  border-left: none !important;
 }
 
 .experience-item:last-child, .education-item:last-child {
@@ -328,8 +330,8 @@ body {
 }
 
 .company-group-block .multi-role-item:not(:only-child) {
-  padding-left: 14px;
-  border-left: 2px solid var(--border-color);
+  padding-left: 14px !important;
+  border-left: 2px solid var(--border-color) !important;
 }
 
 /* --- SKILLS TAG CLOUD --- */
