@@ -24,32 +24,32 @@ const ResumeTab = ({ secretData }) => {
           {
             role: "Senior Solutions Architect", 
             period: "2023 - 2026", 
-            description: "• Process Engineer – System Integration & Design, CMO & FMO mapping, Operation Workflows\n• Program Manager – Budget & Funding Management, AI Strategic Initiative Planning\n• Network & Security Architecture – SDWAN, DDoS & Firewall Solutioning"
+            description: "Dynamic Process Engineer and Program Manager specializing in systems integration, operational workflow design, and strategic AI initiatives from budget to deployment. Expert in translating complex requirements into seamless CMO/FMO roadmaps while architecting robust network and security solutions, including SD-WAN, DDoS mitigation, and firewall infrastructure."
           },
           {
             role: "Senior Developer, Full Stack", 
             period: "2017 - 2023", 
-            description: "• SQL Developer– MSSQL, Oracle, PostgreSQL\n• SQL Server Administrator –MSSQL Server MLS integrated AI LLM (via Python)\n• RPA - Automate BPA, Blue Prism, Automation Anywhere\n• Data Analyst – AI Forecast Reporting"
+            description: "Versatile SQL Developer, Database Administrator, and Automation Expert specializing in MSSQL, Oracle, and PostgreSQL management, with specialized expertise integrating AI LLMs into SQL environments via Python. Proven track record leveraging RPA tools like Blue Prism and Automation Anywhere to automate complex Business Process Automation (BPA) workflows and driving data-led decisions through advanced AI-powered forecast reporting."
           }
         ]
       }, 
       { 
-        company: "The Beasharps (Barbershop Quartet)", 
+        company: "IBM Canada", 
         roles: [
           {
-            role: "Lead Singer & Songwriter", 
-            period: "1993", 
-            description: "Achieved global musical fame, won a Grammy Award, and spearheaded a chart-topping album before retiring back to the nuclear industry." 
+            role: "Application Specialist", 
+            period: "2017", 
+            description: "Technical Support Engineer and Network Administrator specializing in web application infrastructure, backend systems, and network administration. Proficient in managing SQL Server environments with a focus on designing and maintaining automated stored procedures to optimize database reliability, system performance, and operational support." 
           }
         ]
       }, 
       { 
-        company: "NASA", 
+        company: "Fujixerox Korea", 
         roles: [
           {
-            role: "Astronaut", 
-            period: "1994", 
-            description: "Selected for the civilian space flight program. Successfully orbited Earth, introduced an experimental space-ant colony, and secured an inanimate carbon rod." 
+            role: "Software / Solution Engineer", 
+            period: "2015-2016", 
+            description: "Systems Engineer and Developer specializing in low-level C/C++ printer driver development and enterprise network administration. Experienced in conducting rigorous driver and connectivity testing across wireless and wired protocols, including Wi-Fi, Bluetooth, and LAN, to ensure seamless hardware-to-software integration and reliable device performance." 
           }
         ]
       } 
