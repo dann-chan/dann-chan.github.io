@@ -18,26 +18,40 @@ const ResumeTab = ({ secretData }) => {
     
     experience: [ 
       { 
-        role2: "Senior Solutions Architect", 
-        company2: "Bell Canada", 
-        period2: "2023 - 2026", 
-        description2: "•	Process Engineer – System Integration & Design, CMO & FMO mapping, Operation Workflows •	Program Manager – Budget & Funding Management, AI Strategic Initiative Planning •	Network & Security Architecture – SDWAN, DDoS & Firewall Solutioning",
-        role: "Senior Developer, Full Stack", 
-        company: "Bell Canada", 
-        period: "2017 - 2023", 
-        description: "•	SQL Developer– MSSQL, Oracle, PostgreSQL •	SQL Server Administrator –MSSQL Server MLS integrated AI LLM (via Python) •	RPA - Automate BPA, Blue Prism, Automation Anywhere •	Data Analyst – AI Forecast Reporting"
+        company: "Bell Canada",
+        // Array of roles allows multiple job histories under the same company heading
+        roles: [
+          {
+            role: "Senior Solutions Architect", 
+            period: "2023 - 2026", 
+            description: "• Process Engineer – System Integration & Design, CMO & FMO mapping, Operation Workflows\n• Program Manager – Budget & Funding Management, AI Strategic Initiative Planning\n• Network & Security Architecture – SDWAN, DDoS & Firewall Solutioning"
+          },
+          {
+            role: "Senior Developer, Full Stack", 
+            period: "2017 - 2023", 
+            description: "• SQL Developer– MSSQL, Oracle, PostgreSQL\n• SQL Server Administrator –MSSQL Server MLS integrated AI LLM (via Python)\n• RPA - Automate BPA, Blue Prism, Automation Anywhere\n• Data Analyst – AI Forecast Reporting"
+          }
+        ]
       }, 
       { 
-        role: "Lead Singer & Songwriter", 
         company: "The Beasharps (Barbershop Quartet)", 
-        period: "1993", 
-        description: "Achieved global musical fame, won a Grammy Award, and spearheaded a chart-topping album before retiring back to the nuclear industry." 
+        roles: [
+          {
+            role: "Lead Singer & Songwriter", 
+            period: "1993", 
+            description: "Achieved global musical fame, won a Grammy Award, and spearheaded a chart-topping album before retiring back to the nuclear industry." 
+          }
+        ]
       }, 
       { 
-        role: "Astronaut", 
         company: "NASA", 
-        period: "1994", 
-        description: "Selected for the civilian space flight program. Successfully orbited Earth, introduced an experimental space-ant colony, and secured an inanimate carbon rod." 
+        roles: [
+          {
+            role: "Astronaut", 
+            period: "1994", 
+            description: "Selected for the civilian space flight program. Successfully orbited Earth, introduced an experimental space-ant colony, and secured an inanimate carbon rod." 
+          }
+        ]
       } 
     ], 
       
@@ -52,7 +66,7 @@ const ResumeTab = ({ secretData }) => {
         school: "Springfield High School", 
         year: "1974" 
       } 
-    ] 
+    ]
   };
 
   return (
@@ -89,14 +103,19 @@ const ResumeTab = ({ secretData }) => {
 
           <section className="profile-section">
             <h3>Experience</h3>
-            {profileData.experience.map((job, index) => (
-              <div key={index} className="experience-item">
-                <div className="item-header">
-                  <h4>{job.role}</h4>
-                  <span className="item-date">{job.period}</span>
-                </div>
-                <h5>{job.company}</h5>
-                <p>{job.description}</p>
+            {profileData.experience.map((item, compIndex) => (
+              <div key={compIndex} className="company-group-block">
+                <h5 className="company-main-title">{item.company}</h5>
+                
+                {item.roles.map((job, roleIndex) => (
+                  <div key={roleIndex} className="experience-item multi-role-item">
+                    <div className="item-header">
+                      <h4>{job.role}</h4>
+                      <span className="item-date">{job.period}</span>
+                    </div>
+                    <p style={{ whiteSpace: 'pre-line' }}>{job.description}</p>
+                  </div>
+                ))}
               </div>
             ))}
           </section>
@@ -131,3 +150,5 @@ const ResumeTab = ({ secretData }) => {
 };
 
 export default ResumeTab;
+
+
