@@ -29,16 +29,16 @@ const ProfilePage = ({ secretData, onLogout }) => {
         
         <div className="sidebar-links-group">
           <button 
-            className={`sidebar-nav-btn ${activeTab === 'biography' ? 'active' : ''}`}
-            onClick={() => setActiveTab('biography')}
-          >
-            📋 Biography
-          </button>
-          <button 
             className={`sidebar-nav-btn ${activeTab === 'resume' ? 'active' : ''}`}
             onClick={() => setActiveTab('resume')}
           >
             📄 Resume
+          </button>
+          <button 
+            className={`sidebar-nav-btn ${activeTab === 'biography' ? 'active' : ''}`}
+            onClick={() => setActiveTab('biography')}
+          >
+            📋 Biography
           </button>
           <button 
             className={`sidebar-nav-btn ${activeTab === 'projects' ? 'active' : ''}`}
