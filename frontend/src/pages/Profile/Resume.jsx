@@ -196,8 +196,8 @@ const ResumeTab = ({ secretData }) => {
                   <p className="ref-company">{ref.company}</p>
                   <p className="ref-location">{ref.location}</p>
                   <div className="ref-contact-info">
-                    <span> {ref.phone}</span>
-                    <span> <a href={`mailto:${ref.email}`}>{ref.email}</a></span>
+                    <div className="ref-contact-row">📱 {ref.phone}</div>
+                    <div className="ref-contact-row">✉️ <a href={`mailto:${ref.email}`}>{ref.email}</a></div>
                   </div>
                   <p className="ref-relation"><strong>Relationship:</strong> {ref.relationship}</p>
                 </div>
