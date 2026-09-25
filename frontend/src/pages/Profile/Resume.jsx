@@ -80,11 +80,34 @@ const ResumeTab = ({ secretData }) => {
         year: "2026",
         location: "Online"
       } 
+    ],
+    
+    references: [
+      {
+        name: "John Doe, P.Eng.",
+        title: "Senior Systems Engineer",
+        company: "Aerospace Dynamics Corp.",
+        location: "Toronto, ON",
+        phone: "(416) 555-0199",
+        email: "j.doe@aerospacedynamics.com",
+        relationship: "Former direct supervisor."
+      },
+      {
+        name: "Jane Doe, P.Eng.",
+        title: "Systems Engineer",
+        company: "Aerospace Dynamics Corp.",
+        location: "Toronto, ON",
+        phone: "(416) 111-1111",
+        email: "jane.doe@aerospacedynamics.com",
+        relationship: "Coworker"
+      }
     ]
   };
 
   return (
     <div className="profile-container">
+      
+      {/*Header Section ******************************************************************************/}
       <header className="profile-header">
         <div className="avatar-layout-group">
           <div className="avatar-wrapper">
@@ -97,7 +120,8 @@ const ResumeTab = ({ secretData }) => {
           </div>
         </div>
       </header>
-
+      
+      {/*Contact Section *****************************************************************************/}
       <section className="profile-contact">
         <span className="contact-item"><strong>Email:</strong> chan.danny@hotmail.com</span>
         <span className="contact-divider">•</span>
@@ -107,14 +131,15 @@ const ResumeTab = ({ secretData }) => {
           <strong>Web:</strong> <a href="https://dann-chan.github.io" target="_blank" rel="noreferrer">dann-chan.github.io</a>
         </span>
       </section>
-
+      
       <div className="profile-body">
         <main className="profile-main">
+          {/* About Section ***************************************************************************/}
           <section className="profile-section">
             <h3>About</h3>
             <p className="bio-text">{profileData.bio}</p>
           </section>
-
+          {/* Experience Section ***********************************************************************/}
           <section className="profile-section">
             <h3>Experience</h3>
             {profileData.experience.map((item, compIndex) => (
@@ -133,7 +158,7 @@ const ResumeTab = ({ secretData }) => {
               </div>
             ))}
           </section>
-
+          {/*Education Section **************************************************************************/}
           <section className="profile-section">
             <h3>Education</h3>
             {profileData.education.map((edu, index) => (
@@ -152,11 +177,31 @@ const ResumeTab = ({ secretData }) => {
         </main>
 
         <aside className="profile-sidebar">
+          {/* Skills Section *****************************************************************************/}
           <section className="profile-section">
             <h3>Skills</h3>
             <div className="skills-tags">
               {profileData.skills.map((skill, index) => (
                 <span key={index} className="skill-tag">{skill}</span>
+              ))}
+            </div>
+          </section>
+          {/* References Section **************************************************************************/}
+          <section className="profile-section">
+            <h3>References</h3>
+            <div className="references-list">
+              {profileData.references && profileData.references.map((ref, index) => (
+                <div key={index} className="reference-item-card">
+                  <h4 className="ref-name">{ref.name}</h4>
+                  <p className="ref-title">{ref.title}</p>
+                  <p className="ref-company">{ref.company}</p>
+                  <p className="ref-location">{ref.location}</p>
+                  <div className="ref-contact-info">
+                    <span>📱 {ref.phone}</span>
+                    <span>✉️ <a href={`mailto:${ref.email}`}>{ref.email}</a></span>
+                  </div>
+                  <p className="ref-relation"><strong>Relationship:</strong> {ref.relationship}</p>
+                </div>
               ))}
             </div>
           </section>
