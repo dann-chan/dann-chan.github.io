@@ -35,7 +35,6 @@ const authenticateToken = (req, res, next) => {
 
 // Resolves your 404 error
 app.get('/api/protected-data', authenticateToken, (req, res) => {
-  // Replace this object with whatever content Danny's profile needs
   return res.json({
     success: true,
     secretContent: {
