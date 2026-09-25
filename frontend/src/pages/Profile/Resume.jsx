@@ -140,7 +140,10 @@ const ResumeTab = ({ secretData }) => {
               <div key={index} className="education-item">
                 <div className="item-header">
                   <h4>{edu.degree}</h4>
-                  <span className="item-date">{edu.year}</span>
+                  <div className="item-time-meta">
+                    <span className="item-date">{edu.year}</span>
+                    {edu.location && <span className="item-location">{edu.location}</span>}
+                  </div>
                 </div>
                 <h5>{edu.school}</h5>
               </div>
