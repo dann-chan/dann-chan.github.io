@@ -335,6 +335,20 @@ body {
   color: var(--text-primary);
 }
 
+.item-time-meta {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.item-location {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
 /* --- SKILLS TAG CLOUD --- */
 .skills-tags {
   display: flex;
