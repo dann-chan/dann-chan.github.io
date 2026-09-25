@@ -137,15 +137,15 @@ const ResumeTab = ({ secretData }) => {
           <section className="profile-section">
             <h3>Education</h3>
             {profileData.education.map((edu, index) => (
-              <div key={index} className="education-item">
-                <div className="item-header">
-                  <h4>{edu.degree}</h4>
-                  <div className="item-time-meta">
-                    <span className="item-date">{edu.year}</span>
-                    {edu.location && <span className="item-location">{edu.location}</span>}
-                  </div>
+              <div key={index} className="education-card-block">
+                <div className="education-row">
+                  <h4 className="edu-degree">{edu.degree}</h4>
+                  <span className="edu-year">{edu.year}</span>
                 </div>
-                <h5>{edu.school}</h5>
+                <div className="education-row">
+                  <h5 className="edu-school">{edu.school}</h5>
+                  {edu.location && <span className="edu-location">{edu.location}</span>}
+                </div>
               </div>
             ))}
           </section>
