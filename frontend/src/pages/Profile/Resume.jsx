@@ -19,7 +19,6 @@ const ResumeTab = ({ secretData }) => {
     experience: [ 
       { 
         company: "Bell Canada",
-        // Array of roles allows multiple job histories under the same company heading
         roles: [
           {
             role: "Senior Solutions Architect", 
