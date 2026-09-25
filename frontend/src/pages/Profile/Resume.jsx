@@ -83,15 +83,6 @@ const ResumeTab = ({ secretData }) => {
     
     references: [
       {
-        name: "Ravi Shankar",
-        title: "Senior Consultant",
-        company: "CIBC",
-        location: "Toronto, ON",
-        phone: "(647) 973-6465",
-        email: "ravisg28@gmail.com",
-        relationship: "Former coworker."
-      },
-      {
         name: "Nancy Abergel",
         title: "Director - Client Service Operations & Experience",
         company: "Bell Canada",
@@ -107,6 +98,15 @@ const ResumeTab = ({ secretData }) => {
         location: "Toronto, ON",
         phone: "(416) 770-4020",
         email: "queenie.mok@bell.ca",
+        relationship: "Former coworker."
+      },
+      {
+        name: "Ravi Shankar",
+        title: "Senior Consultant",
+        company: "CIBC",
+        location: "Toronto, ON",
+        phone: "(647) 973-6465",
+        email: "ravisg28@gmail.com",
         relationship: "Former coworker."
       }
     ]
