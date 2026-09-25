@@ -97,5 +97,10 @@ app.post('/api/verify-passcode', (req, res) => {
   });
 });
 
+//  Healthcheck for backend wake up
+app.get('/api/health', (req, res) => {
+  return res.status(200).json({ status: 'awake', timestamp: new Date() });
+});
+
 // App listener setup
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
