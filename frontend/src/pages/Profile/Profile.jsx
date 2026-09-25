@@ -49,7 +49,7 @@ const ProfilePage = ({ secretData, onLogout }) => {
         </div>
 
         <button className="sidebar-logout-btn" onClick={onLogout}>
-          Secure Sign Out
+          Sign Out
         </button>
       </nav>
 
