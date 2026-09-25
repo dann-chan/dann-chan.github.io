@@ -192,6 +192,7 @@ body {
   color: var(--text-secondary);
 }
 
+/* Contact Section *****************************************************************/
 .profile-contact {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -225,7 +226,7 @@ body {
   user-select: none;
 }
 
-/* --- INFORMATION BODY GRID --- */
+/* About Section *****************************************************************/
 .profile-body {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -255,7 +256,7 @@ body {
   font-size: 15px;
 }
 
-/* --- EXPERIENCE INNER ITEMS --- */
+/* Experience Section ***********************************************************/
 .experience-item {
   margin-bottom: 24px;
 }
@@ -319,7 +320,7 @@ body {
   border-top: 1px dashed var(--border-color);
 }
 
-/* --- EDUCATION MAIN TRACKS --- */
+/* Education Section ****************************************************************/
 .item-time-meta {
   display: flex;
   flex-direction: column;
@@ -382,7 +383,7 @@ body {
   white-space: nowrap;
 }
 
-/* --- SKILLS TAG CLOUD --- */
+/* Skills Section  ********************************************************************/
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
@@ -399,7 +400,19 @@ body {
   border: 1px solid var(--border-color);
 }
 
-/* --- RESPONSIVE MOBILE OVERRIDES --- */
+/* Reference Section *******************************************************************/
+.ref-company, .ref-location, .ref-relation, .ref-contact-info span {
+  color: var(--text-secondary) !important; 
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ref-relation strong {
+  color: var(--text-primary);
+}
+
+/* Mobile overrides *********************************************************************/
 @media (max-width: 768px) {
   .app-workspace-layout {
     flex-direction: column;
