@@ -63,7 +63,7 @@ const ResumeTab = ({ secretData }) => {
         location: "Asan, South Korea"
       }, 
       { 
-        degree: "Earth & Space Engineering, Bachlor of Science", 
+        degree: "Earth & Space Engineering, Bachelor of Science", 
         school: "York University", 
         year: "2007",
         location: "Toronto, Canada"
