@@ -6,7 +6,7 @@ const ProjectsTab = () => {
     <div className="profile-container">
       <div className="tab-placeholder-view">
         <h2>Projects Portfolio</h2>
-        <p>Your microservice showcases, architectural blueprints, or live case-studies go here.</p>
+        <p>Templ for showcases, architectural blueprints, or live case-studies.</p>
       </div>
     </div>
   );
