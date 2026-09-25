@@ -83,22 +83,31 @@ const ResumeTab = ({ secretData }) => {
     
     references: [
       {
-        name: "John Doe, P.Eng.",
-        title: "Senior Systems Engineer",
-        company: "Aerospace Dynamics Corp.",
+        name: "Ravi Shankar",
+        title: "Senior Consultant",
+        company: "CIBC",
         location: "Toronto, ON",
-        phone: "(416) 555-0199",
-        email: "j.doe@aerospacedynamics.com",
+        phone: "(647) 973-6465",
+        email: "ravisg28@gmail.com",
+        relationship: "Former coworker."
+      },
+      {
+        name: "Nancy Abergel",
+        title: "Director - Client Service Operations & Experience",
+        company: "Bell Canada",
+        location: "Montreal, QC",
+        phone: "(514) 391-5297",
+        email: "nancy.abergel@bell.ca",
         relationship: "Former direct supervisor."
       },
       {
-        name: "Jane Doe, P.Eng.",
-        title: "Systems Engineer",
-        company: "Aerospace Dynamics Corp.",
+        name: "Queenie Mok",
+        title: "Director - Operational Planning & Technology",
+        company: "Bell Canada",
         location: "Toronto, ON",
-        phone: "(416) 111-1111",
-        email: "jane.doe@aerospacedynamics.com",
-        relationship: "Coworker"
+        phone: "(416) 770-4020",
+        email: "queenie.mok@bell.ca",
+        relationship: "Former coworker."
       }
     ]
   };
