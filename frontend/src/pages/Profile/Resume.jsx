@@ -3,7 +3,7 @@ import React from 'react';
 
 const ResumeTab = ({ secretData }) => {
   const profileData = {
-    name: "Danny Chan",
+    name: "Danny Chan, M.Eng",
     title: "Senior Solutions Architect & Program Manager",
     location: "Toronto, Canada",
     avatar: "https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E",
@@ -196,8 +196,8 @@ const ResumeTab = ({ secretData }) => {
                   <p className="ref-company">{ref.company}</p>
                   <p className="ref-location">{ref.location}</p>
                   <div className="ref-contact-info">
-                    <div className="ref-contact-row">📱 {ref.phone}</div>
-                    <div className="ref-contact-row">✉️ <a href={`mailto:${ref.email}`}>{ref.email}</a></div>
+                    <div className="ref-contact-row">{ref.phone}</div>
+                    <div className="ref-contact-row"><a href={`mailto:${ref.email}`}>{ref.email}</a></div>
                   </div>
                   <p className="ref-relation"><strong>Relationship:</strong> {ref.relationship}</p>
                 </div>
