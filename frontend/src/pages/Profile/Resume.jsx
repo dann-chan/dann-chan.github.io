@@ -57,14 +57,28 @@ const ResumeTab = ({ secretData }) => {
       
     education: [ 
       { 
-        degree: "Nuclear Physics Crash Course", 
-        school: "Springfield University", 
-        year: "1993" 
+        degree: "Electronics & Computer Engineering, Master of Engineering", 
+        school: "Sun Moon University", 
+        year: "2015" ,
+        location: "Asan, South Korea"
       }, 
       { 
-        degree: "High School Diploma", 
-        school: "Springfield High School", 
-        year: "1974" 
+        degree: "Earth & Space Engineering, Bachlor of Science", 
+        school: "York University", 
+        year: "2007",
+        location: "Toronto, Canada"
+      },
+      { 
+        degree: "DevOps Cloud Expert Program, Certificate", 
+        school: "University of Ottawa", 
+        year: "2023",
+        location: "Cloud Campus"  
+      }, 
+      { 
+        degree: "Program Management Professional (PgMP), Certificate", 
+        school: "PMTraining", 
+        year: "2026",
+        location: "Online"
       } 
     ]
   };
