@@ -6,7 +6,7 @@ const BiographyTab = () => {
     <div className="profile-container">
       <div className="tab-placeholder-view">
         <h2>Biography View Frame</h2>
-        <p>Your timeline summaries, personal info, or memorable moments go here.</p>
+        <p>Templ for timeline summaries, personal info, or memorable moments.</p>
       </div>
     </div>
   );
