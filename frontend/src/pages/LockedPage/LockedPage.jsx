@@ -30,7 +30,7 @@ export default function LockedPage() {
       });
     } else {
       // Send a wake-up ping immediately
-      fetch('https://project-pvnd.onrender.com/api/verify-passcode')
+      fetch('https://project-pvnd.onrender.com/api/health')
         .then(res => res.json())
         .then(data => console.log('Backend server initialized:', data.status))
         .catch(err => console.log('Backend wake-up ping initiated...'));
