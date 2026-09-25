@@ -28,14 +28,14 @@ body {
   padding: 0;                
 }
 
-/* --- DASHBOARD GRID SHELL --- */
+/* Dashboard Grid  ***************************************************/
 .app-workspace-layout {
   display: flex;
   min-height: 100vh;
   width: 100%;
 }
 
-/* --- NAVIGATION SIDEBAR PANEL --- */
+/* Navigation Sidebar **************************************************/
 .app-navigation-sidebar {
   width: var(--sidebar-width);
   background-color: var(--card-bg);
@@ -111,7 +111,7 @@ body {
   color: #ffffff;
 }
 
-/* --- MAIN WORKING CANVAS FRAME --- */
+/* Main Frame ******************************************************/
 .app-content-viewframe {
   flex-grow: 1;
   margin-left: var(--sidebar-width); 
@@ -128,7 +128,7 @@ body {
   gap: 20px;
 }
 
-/* --- TAB PLACEHOLDER LAYOUTS (Resume & Projects) --- */
+/* Placeholder ******************************************/
 .tab-placeholder-view {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -147,7 +147,7 @@ body {
   color: var(--text-secondary);
 }
 
-/* --- BIOGRAPHY TAB CORE BLOCKS --- */
+/* Header Section *********************************************/
 .profile-header {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -401,6 +401,20 @@ body {
 }
 
 /* Reference Section *******************************************************************/
+.ref-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary) !important; 
+}
+
+.ref-title {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-color) !important;
+}
+
 .ref-company, .ref-location, .ref-relation, .ref-contact-info span {
   color: var(--text-secondary) !important; 
   font-size: 12px;
