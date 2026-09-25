@@ -401,6 +401,18 @@ body {
 }
 
 /* Reference Section *******************************************************************/
+.reference-item-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reference-item-card + .reference-item-card {
+  border-top: 1px dashed var(--border-color);
+  padding-top: 24px;  
+  margin-top: 8px;    
+}
+
 .ref-name {
   margin: 0;
   font-size: 16px;
@@ -415,7 +427,9 @@ body {
   color: var(--accent-color) !important;
 }
 
-.ref-company, .ref-location, .ref-relation, .ref-contact-info span {
+.ref-company, 
+.ref-location, 
+.ref-relation {
   color: var(--text-secondary) !important; 
   font-size: 12px;
   margin: 0;
@@ -424,6 +438,27 @@ body {
 
 .ref-relation strong {
   color: var(--text-primary);
+}
+
+.ref-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;           
+  margin: 6px 0;
+}
+
+.ref-contact-row {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.ref-contact-row a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.ref-contact-row a:hover {
+  text-decoration: underline;
 }
 
 /* Mobile overrides *********************************************************************/
