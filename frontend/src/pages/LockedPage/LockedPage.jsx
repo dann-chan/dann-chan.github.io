@@ -30,7 +30,7 @@ export default function LockedPage() {
       });
     } else {
       // Send a wake-up ping immediately
-      fetch('https://project-pvnd.onrender.com/api/protected-data')
+      fetch('https://project-pvnd.onrender.com/api/verify-passcode')
         .then(res => res.json())
         .then(data => console.log('Backend server initialized:', data.status))
         .catch(err => console.log('Backend wake-up ping initiated...'));
@@ -139,7 +139,7 @@ export default function LockedPage() {
               maxLength={12}
               disabled={isLockedOut || isLoading} 
             />
-          {/* Display professional visibility toggle only when characters are present and app isn't locked */}
+          {/* Toggle only when characters are present and app isn't locked */}
           {!isLockedOut && passcode && (
             <button
               type="button"
