@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import BiographyTab from './Biography';
 import ResumeTab from './Resume';
 import ProjectsTab from './Projects';
+import CertificationsTab from './Certifications'; 
 import './Profile.css';
 
 const ProfilePage = ({ secretData, onLogout }) => {
-  const [activeTab, setActiveTab] = useState('Resume');
+  const [activeTab, setActiveTab] = useState('resume');
 
   const renderMainContent = () => {
     switch (activeTab) {
@@ -14,6 +15,8 @@ const ProfilePage = ({ secretData, onLogout }) => {
         return <BiographyTab />;
       case 'projects':
         return <ProjectsTab />;
+      case 'certifications':
+        return <CertificationsTab />;
       case 'resume':
       default:
         return <ResumeTab secretData={secretData} />;
@@ -45,6 +48,12 @@ const ProfilePage = ({ secretData, onLogout }) => {
             onClick={() => setActiveTab('projects')}
           >
             💻 Projects
+          </button>
+          <button 
+            className={`sidebar-nav-btn ${activeTab === 'certifications' ? 'active' : ''}`}
+            onClick={() => setActiveTab('certifications')}
+          >
+            🎓 Degrees & Certs
           </button>
         </div>
 
