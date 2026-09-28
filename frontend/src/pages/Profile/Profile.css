@@ -464,6 +464,20 @@ body {
   text-decoration: underline;
 }
 
+/* Certifications Tab *******************************************************************/
+.edu-description {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.credential-divider {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border-color);
+}
+
 /* Mobile overrides *********************************************************************/
 @media (max-width: 768px) {
   .app-workspace-layout {
