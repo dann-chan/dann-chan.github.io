@@ -37,6 +37,12 @@ const ProfilePage = ({ secretData, onLogout }) => {
           >
             📄 Resume
           </button>
+           <button 
+            className={`sidebar-nav-btn ${activeTab === 'certifications' ? 'active' : ''}`}
+            onClick={() => setActiveTab('certifications')}
+          >
+            🎓 Degrees & Certs
+          </button>
           <button 
             className={`sidebar-nav-btn ${activeTab === 'biography' ? 'active' : ''}`}
             onClick={() => setActiveTab('biography')}
@@ -48,12 +54,6 @@ const ProfilePage = ({ secretData, onLogout }) => {
             onClick={() => setActiveTab('projects')}
           >
             💻 Projects
-          </button>
-          <button 
-            className={`sidebar-nav-btn ${activeTab === 'certifications' ? 'active' : ''}`}
-            onClick={() => setActiveTab('certifications')}
-          >
-            🎓 Degrees & Certs
           </button>
         </div>
 
