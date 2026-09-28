@@ -10,14 +10,14 @@ const CertificationsTab = () => {
         <h3>Recognitions</h3>      
         <div className="education-card-block">
           <div className="edu-logo-wrapper">
-            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="Company Logo" className="edu-logo-img" />
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQSCokXo4y_mR7YpTraa3HOPAWRclPLHWxpDKvGCiqjRtV8" alt="Company Logo" className="edu-logo-img" />
           </div>
           <div className="education-row">
-            <h4 className="edu-degree">John Doe - CEO of ABC Company</h4>
-            <span className="edu-year">Jan 2026</span>
+            <h4 className="edu-degree">Mirko Bibic - CEO of Bell Canada</h4>
+            <span className="edu-year">Apr 2025</span>
           </div>
           <div className="education-row">
-            <h5 className="edu-school">ABC Company</h5>
+            <h5 className="edu-school">Bell Canada</h5>
           </div>
           <p className="edu-description">
             Awarded for demonstrating exceptional leadership, core architectural foresight, and driving milestone product deliverable goals ahead of initial timeline projections.
@@ -88,14 +88,14 @@ const CertificationsTab = () => {
               <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQS0vkA0Lhx-ToNJK1nUeo-eASvk75RVcKxmB7rXbN63Pps" alt="Meta Logo" className="edu-logo-img" />
             </div>
             <div className="education-row">
-              <h4 className="edu-degree">Danny Chan - Certificate of Intellectual Achievement</h4>
+              <h4 className="edu-degree">Certificate of Intellectual Achievement</h4>
               <span className="edu-year">Dec 2006</span>
             </div>
             <div className="education-row">
               <h5 className="edu-school">Tickle Inc. (Intelligence Measurement Program)</h5>
             </div>
             <p className="edu-description">
-              Earned distinction with a measured intellectual capacity IQ score of 136. Officially attested and countersigned via the PhD Certified verification program.
+              Earned distinction with a measured intellectual capacity IQ score of 136 (national average is 90). Officially attested and countersigned via the PhD Certified verification program.
             </p>
         </div>
       </div>
