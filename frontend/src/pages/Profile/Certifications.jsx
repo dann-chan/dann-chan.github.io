@@ -85,7 +85,7 @@ const CertificationsTab = () => {
         {/* Tickle Inc. **************/}
         <div className="education-card-block credential-divider">
             <div className="edu-logo-wrapper">
-              <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="Meta Logo" className="edu-logo-img" />
+              <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQS0vkA0Lhx-ToNJK1nUeo-eASvk75RVcKxmB7rXbN63Pps" alt="Meta Logo" className="edu-logo-img" />
             </div>
             <div className="education-row">
               <h4 className="edu-degree">Danny Chan - Certificate of Intellectual Achievement</h4>
