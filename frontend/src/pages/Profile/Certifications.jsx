@@ -9,6 +9,9 @@ const CertificationsTab = () => {
       <div className="profile-section">
         <h3>Recognitions</h3>      
         <div className="education-card-block">
+          <div className="edu-logo-wrapper">
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="Company Logo" className="edu-logo-img" />
+          </div>
           <div className="education-row">
             <h4 className="edu-degree">John Doe - CEO of ABC Company</h4>
             <span className="edu-year">Jan 2026</span>
@@ -26,6 +29,9 @@ const CertificationsTab = () => {
       <div className="profile-section">
         <h3>Degrees & Academic Credentials</h3>
         <div className="education-card-block">
+          <div className="edu-logo-wrapper">
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="University Logo" className="edu-logo-img" />
+          </div>
           <div className="education-row">
             <h4 className="edu-degree">Bachelor of Science in Computer Science</h4>
             <span className="edu-year">2020 - 2024</span>
@@ -44,6 +50,9 @@ const CertificationsTab = () => {
       <div className="profile-section">
         <h3>Professional Certifications</h3>
         <div className="education-card-block">
+          <div className="edu-logo-wrapper">
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="AWS Cloud Logo" className="edu-logo-img" />
+          </div>
           <div className="education-row">
             <h4 className="edu-degree">AWS Certified Solutions Architect – Associate</h4>
             <span className="edu-year">Issued Nov 2025</span>
@@ -58,6 +67,9 @@ const CertificationsTab = () => {
         </div>
 
         <div className="education-card-block credential-divider">
+          <div className="edu-logo-wrapper">
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="Meta Logo" className="edu-logo-img" />
+          </div>
           <div className="education-row">
             <h4 className="edu-degree">Meta Front-End Developer Professional Certificate</h4>
             <span className="edu-year">Issued Aug 2024</span>
