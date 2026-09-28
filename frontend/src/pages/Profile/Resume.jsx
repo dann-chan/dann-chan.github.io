@@ -56,7 +56,7 @@ const ResumeTab = ({ secretData }) => {
       
     education: [ 
       { 
-        degree: "Electronics & Computer Engineering, Master of Engineering", 
+        degree: "Electronics Engineering, Master of Engineering", 
         school: "Sun Moon University", 
         year: "2015" ,
         location: "Asan, South Korea"
