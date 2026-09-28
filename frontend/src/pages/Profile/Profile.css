@@ -79,6 +79,9 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sidebar-nav-btn:hover {
@@ -478,11 +481,14 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 6px;
   }
   .sidebar-nav-btn {
     width: auto;
+    flex: 1 1 auto; /* Dynamically resizes buttons to share space on rows evenly */
     padding: 8px 12px;
-    font-size: 14px;
+    font-size: 13px;
+    text-align: center;
   }
   .sidebar-logout-btn {
     margin-top: 12px;
