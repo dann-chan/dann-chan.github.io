@@ -82,6 +82,22 @@ const CertificationsTab = () => {
             Comprehensive professional training track covering responsive user interfaces, React state management, web development frameworks, version control protocols, and component architectures.
           </p>
         </div>
+        {/* Tickle Inc. **************/}
+        <div className="education-card-block credential-divider">
+            <div className="edu-logo-wrapper">
+              <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="Meta Logo" className="edu-logo-img" />
+            </div>
+            <div className="education-row">
+              <h4 className="edu-degree">Danny Chan - Certificate of Intellectual Achievement</h4>
+              <span className="edu-year">Dec 2006</span>
+            </div>
+            <div className="education-row">
+              <h5 className="edu-school">Tickle Inc. (Intelligence Measurement Program)</h5>
+            </div>
+            <p className="edu-description">
+              Earned distinction with a measured intellectual capacity IQ score of 136. Officially attested and countersigned via the PhD Certified verification program.
+            </p>
+        </div>
       </div>
     </div>
   );
