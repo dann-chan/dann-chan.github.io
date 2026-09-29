@@ -28,20 +28,39 @@ const CertificationsTab = () => {
      {/* Degrees & Academic Credentials **********************************************************************/}
       <div className="profile-section">
         <h3>Degrees & Academic Credentials</h3>
+
+         {/* MEng *************************/}
         <div className="education-card-block">
+          <div className="edu-logo-wrapper">
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQSJZfz_PKsbQryI3Ih68S2dAZNEnqTo5COkmYBdOX4kvec" alt="University Logo" className="edu-logo-img" />
+          </div>
+          <div className="education-row">
+            <h4 className="edu-degree">Master of Engineering in Electionic Engineering</h4>
+            <span className="edu-year">2013 - 2015</span>
+          </div>
+          <div className="education-row">
+            <h5 className="edu-school">Sun Moon University</h5>
+            <span className="edu-location">Asan, South Korea</span>
+          </div>
+          <p className="edu-description">
+            Specialized in Software Automation & Control Theory on Distributed Systems. Graduated with Honours GPA of 4.36, participating in advanced algorithms and system architectures development.
+          </p>
+        </div>
+        {/* BSc *************************/}
+        <div className="education-card-block credential-divider">
           <div className="edu-logo-wrapper">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="University Logo" className="edu-logo-img" />
           </div>
           <div className="education-row">
-            <h4 className="edu-degree">Bachelor of Science in Computer Science</h4>
-            <span className="edu-year">2020 - 2024</span>
+            <h4 className="edu-degree">Bachelor of Science in Earth & Space Engineering</h4>
+            <span className="edu-year">2003 - 2007</span>
           </div>
           <div className="education-row">
-            <h5 className="edu-school">University of Engineering and Tech</h5>
-            <span className="edu-location">Toronto, ON</span>
+            <h5 className="edu-school">York University</h5>
+            <span className="edu-location">Toronto, Canada</span>
           </div>
           <p className="edu-description">
-            Specialized in Software Engineering and Distributed Systems. Graduated with Honours, participating in advanced algorithms and system architectures development tracks.
+            Specialized in Satellite Imagery and Computer Science. Solely developed a proprietary software system from scratch that dynamically stitches sequential satellite photographs and converts them into accurate 3D city topography models, pioneering this spatial reconstruction framework years prior to the commercial launch of Google Earth 3D.
           </p>
         </div>
       </div>
