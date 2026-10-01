@@ -495,6 +495,34 @@ body {
   background-color: transparent;
 }
 
+/* Isolated Side-by-Side Flex Layout */
+.cert-split-container {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.cert-split-container .edu-logo-wrapper {
+  flex: 0 0 280px;           /* Holds image columns strictly at 280px width */
+  width: 280px;
+  margin-bottom: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cert-split-container .edu-logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;       /* Zero truncation: ensures full image contents stay visible */
+}
+
+.cert-text-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Mobile overrides *********************************************************************/
 @media (max-width: 768px) {
   .app-workspace-layout {
