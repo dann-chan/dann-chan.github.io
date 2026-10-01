@@ -1,15 +1,22 @@
 // frontend/src/pages/Profile/Certifications.jsx
-import React from 'react';
+import React, { useState } from 'react';
 
 const CertificationsTab = () => {
+
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const handleImageToggle = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <div className="profile-container">
       
       {/* Recognitions **************************************************************************************/}
       <div className="profile-section">
         <h3>Recognitions</h3>      
-        <div className="education-card-block cert-split-container">
-          <div className="edu-logo-wrapper">
+        <div className={`education-card-block cert-split-container ${expandedIndex === 0 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(0)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQSCokXo4y_mR7YpTraa3HOPAWRclPLHWxpDKvGCiqjRtV8" alt="Company Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
@@ -32,8 +39,8 @@ const CertificationsTab = () => {
         <h3>Degrees & Academic Credentials</h3>
 
          {/* MEng *************************/}
-        <div className="education-card-block cert-split-container">
-          <div className="edu-logo-wrapper">
+        <div className={`education-card-block cert-split-container ${expandedIndex === 1 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(1)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQSJZfz_PKsbQryI3Ih68S2dAZNEnqTo5COkmYBdOX4kvec" alt="University Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
@@ -52,8 +59,8 @@ const CertificationsTab = () => {
         </div>
 
         {/* BSc *************************/}
-        <div className="education-card-block credential-divider cert-split-container">
-          <div className="edu-logo-wrapper">
+        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 2 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(2)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="University Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
@@ -75,8 +82,10 @@ const CertificationsTab = () => {
       {/* Professional Certifications **************************************************************************/}
       <div className="profile-section">
         <h3>Professional Certifications</h3>
-        <div className="education-card-block cert-split-container">
-          <div className="edu-logo-wrapper">
+        
+        {/* AWS *************************/}
+        <div className={`education-card-block cert-split-container ${expandedIndex === 3 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(3)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="AWS Cloud Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
@@ -94,8 +103,9 @@ const CertificationsTab = () => {
           </div>
         </div>
 
-        <div className="education-card-block credential-divider cert-split-container">
-          <div className="edu-logo-wrapper">
+        {/* Meta *************************/}
+        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 4 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(4)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="Meta Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
@@ -114,8 +124,8 @@ const CertificationsTab = () => {
         </div>
 
         {/* Tickle Inc. **************/}
-        <div className="education-card-block credential-divider cert-split-container">
-            <div className="edu-logo-wrapper">
+        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 5 ? 'expanded' : ''}`}>
+            <div className="edu-logo-wrapper" onClick={() => handleImageToggle(5)} title="Click to resize image">
               <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQS0vkA0Lhx-ToNJK1nUeo-eASvk75RVcKxmB7rXbN63Pps" alt="Tickle Logo" className="edu-logo-img" />
             </div>
             <div className="cert-text-block">
@@ -137,4 +147,3 @@ const CertificationsTab = () => {
 };
 
 export default CertificationsTab;
-
