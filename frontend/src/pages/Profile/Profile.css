@@ -538,12 +538,14 @@ body {
     border-bottom: 1px solid var(--border-color);
     padding: 16px;
   }
+  
   .sidebar-links-group {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 6px;
   }
+  
   .sidebar-nav-btn {
     width: auto;
     flex: 1 1 auto; 
@@ -551,13 +553,16 @@ body {
     font-size: 13px;
     text-align: center;
   }
+  
   .sidebar-logout-btn {
     margin-top: 12px;
   }
+  
   .app-content-viewframe {
     margin-left: 0;
     padding: 20px 10px;
   }
+  
   .profile-body {
     grid-template-columns: 1fr;
   }
@@ -566,6 +571,7 @@ body {
     text-align: center;
     gap: 16px;
   }
+  
   .avatar-layout-group {
     flex-direction: column;
     gap: 16px;
@@ -579,13 +585,22 @@ body {
     display: none;
   }
 
-  /* Responsive update for the two column split layout block on mobile screens */
   .education-card-block.cert-split-container {
-    flex-direction: column; 
+    flex-direction: column !important; 
     gap: 16px;
   }
+
   .cert-split-container .edu-logo-wrapper {
-    flex: 0 0 auto;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+  }
+
+  .cert-text-block {
     width: 100%;
   }
+
+  .cert-split-container.expanded .cert-text-block {
+    display: none !important;
+  }
+  
 }
