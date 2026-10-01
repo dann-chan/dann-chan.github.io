@@ -35,7 +35,7 @@ const CertificationsTab = () => {
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQSJZfz_PKsbQryI3Ih68S2dAZNEnqTo5COkmYBdOX4kvec" alt="University Logo" className="edu-logo-img" />
           </div>
           <div className="education-row">
-            <h4 className="edu-degree">Master of Engineering in Electionic Engineering</h4>
+            <h4 className="edu-degree">Master of Engineering in Electronic Engineering</h4>
             <span className="edu-year">2013 - 2015</span>
           </div>
           <div className="education-row">
