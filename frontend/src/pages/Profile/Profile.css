@@ -478,45 +478,33 @@ body {
   border-top: 1px dashed var(--border-color);
 }
 
-.edu-logo-wrapper {
-  margin-bottom: 16px;    
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;             
-  overflow: hidden;        
-  border-radius: 8px;      
-}
-
-.edu-logo-img {
-  width: 100%;             
-  height: auto;            
-  max-width: 100%;         
-  object-fit: cover;       
-  background-color: transparent;
-}
-
-/* Isolated Side-by-Side Flex Layout */
+/* Isolated Side-by-Side Flex Layout Framework */
 .cert-split-container {
   display: flex;
   gap: 24px;
   align-items: flex-start;
 }
 
+/* Image column layout: Locks container to exactly 280px */
 .cert-split-container .edu-logo-wrapper {
-  flex: 0 0 280px;           /* Holds image columns strictly at 280px width */
+  flex: 0 0 280px;           
   width: 280px;
   margin-bottom: 0;
   border-radius: 6px;
   overflow: hidden;
+  display: flex;
 }
 
+/* Zero truncation image styling: scales naturally within the 280px left boundary */
 .cert-split-container .edu-logo-img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;       /* Zero truncation: ensures full image contents stay visible */
+  object-fit: contain;       
+  background-color: transparent;
 }
 
+/* Text column layout: Directs content block to comfortably fill right side screen space */
 .cert-text-block {
   flex: 1;
   display: flex;
@@ -577,11 +565,12 @@ body {
     display: none;
   }
 
-  
-  .education-card-block.cert-split {
+  /* Responsive update for the two column split layout block on mobile screens */
+  .education-card-block.cert-split-container {
     flex-direction: column; 
+    gap: 16px;
   }
-  .cert-split .edu-logo-wrapper {
+  .cert-split-container .edu-logo-wrapper {
     flex: 0 0 auto;
     width: 100%;
   }
