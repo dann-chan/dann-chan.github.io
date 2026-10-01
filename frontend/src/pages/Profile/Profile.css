@@ -478,14 +478,13 @@ body {
   border-top: 1px dashed var(--border-color);
 }
 
-/* Isolated Side-by-Side Flex Layout Framework */
-.cert-split-container {
-  display: flex;
+.education-card-block.cert-split-container {
+  display: flex !important;
+  flex-direction: row !important; 
   gap: 24px;
   align-items: flex-start;
 }
 
-/* Image column layout: Locks container to exactly 280px */
 .cert-split-container .edu-logo-wrapper {
   flex: 0 0 280px;           
   width: 280px;
@@ -495,16 +494,13 @@ body {
   display: flex;
 }
 
-/* Zero truncation image styling: scales naturally within the 280px left boundary */
 .cert-split-container .edu-logo-img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: contain;       
-  background-color: transparent;
 }
 
-/* Text column layout: Directs content block to comfortably fill right side screen space */
 .cert-text-block {
   flex: 1;
   display: flex;
