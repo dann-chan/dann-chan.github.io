@@ -502,10 +502,23 @@ body {
 }
 
 .cert-split .edu-logo-wrapper {
-  flex: 0 0 150px;       
-  margin-bottom: 0;      
+  flex: 0 0 150px;           /* Locks the structural bounding width to 150px */
+  margin-bottom: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #1f242c; /* Adds a clean dark-grey backing fill if the asset is wide */
+  padding: 6px;              /* Gives the logo a bit of breathable margin frame space */
+  box-sizing: border-box;
 }
 
+.cert-split .edu-logo-img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  /* CHANGED TO CONTAIN: Absolutely forbids any clipping or image cropping */
+  object-fit: contain;       
+  display: block;
+}
 
 /* Mobile overrides *********************************************************************/
 @media (max-width: 768px) {
