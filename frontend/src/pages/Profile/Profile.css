@@ -492,6 +492,8 @@ body {
   border-radius: 6px;
   overflow: hidden;
   display: flex;
+  cursor: zoom-in;
+  transition: all 0.3s ease-in-out; 
 }
 
 .cert-split-container .edu-logo-img {
@@ -505,6 +507,22 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.cert-split-container.expanded .cert-text-block {
+  display: none !important;
+}
+
+.cert-split-container.expanded .edu-logo-wrapper {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  cursor: zoom-out; 
+}
+
+.cert-split-container.expanded .edu-logo-img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 /* Mobile overrides *********************************************************************/
