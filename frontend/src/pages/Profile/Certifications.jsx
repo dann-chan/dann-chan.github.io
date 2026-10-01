@@ -10,7 +10,7 @@ const CertificationsTab = () => {
         <h3>Recognitions</h3>      
         <div className="education-card-block cert-split-container">
           <div className="edu-logo-wrapper">
-            <img src="https://1drv.ms" alt="Company Logo" className="edu-logo-img" />
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQSCokXo4y_mR7YpTraa3HOPAWRclPLHWxpDKvGCiqjRtV8" alt="Company Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -34,7 +34,7 @@ const CertificationsTab = () => {
          {/* MEng *************************/}
         <div className="education-card-block cert-split-container">
           <div className="edu-logo-wrapper">
-            <img src="https://1drv.ms" alt="University Logo" className="edu-logo-img" />
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQSJZfz_PKsbQryI3Ih68S2dAZNEnqTo5COkmYBdOX4kvec" alt="University Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -54,7 +54,7 @@ const CertificationsTab = () => {
         {/* BSc *************************/}
         <div className="education-card-block credential-divider cert-split-container">
           <div className="edu-logo-wrapper">
-            <img src="https://1drv.ms" alt="University Logo" className="edu-logo-img" />
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="University Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -77,7 +77,7 @@ const CertificationsTab = () => {
         <h3>Professional Certifications</h3>
         <div className="education-card-block cert-split-container">
           <div className="edu-logo-wrapper">
-            <img src="https://1drv.ms" alt="AWS Cloud Logo" className="edu-logo-img" />
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="AWS Cloud Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -96,7 +96,7 @@ const CertificationsTab = () => {
 
         <div className="education-card-block credential-divider cert-split-container">
           <div className="edu-logo-wrapper">
-            <img src="https://1drv.ms" alt="Meta Logo" className="edu-logo-img" />
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="Meta Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -116,7 +116,7 @@ const CertificationsTab = () => {
         {/* Tickle Inc. **************/}
         <div className="education-card-block credential-divider cert-split-container">
             <div className="edu-logo-wrapper">
-              <img src="https://1drv.ms" alt="Tickle Logo" className="edu-logo-img" />
+              <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQS0vkA0Lhx-ToNJK1nUeo-eASvk75RVcKxmB7rXbN63Pps" alt="Tickle Logo" className="edu-logo-img" />
             </div>
             <div className="cert-text-block">
               <div className="education-row">
