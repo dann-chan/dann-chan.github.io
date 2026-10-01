@@ -495,6 +495,17 @@ body {
   background-color: transparent;
 }
 
+.education-card-block.cert-split {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.cert-split .edu-logo-wrapper {
+  flex: 0 0 150px;       
+  margin-bottom: 0;      
+}
+
 
 /* Mobile overrides *********************************************************************/
 @media (max-width: 768px) {
@@ -517,7 +528,7 @@ body {
   }
   .sidebar-nav-btn {
     width: auto;
-    flex: 1 1 auto; /* Dynamically resizes buttons to share space on rows evenly */
+    flex: 1 1 auto; 
     padding: 8px 12px;
     font-size: 13px;
     text-align: center;
@@ -548,5 +559,14 @@ body {
   }
   .contact-divider {
     display: none;
+  }
+
+  
+  .education-card-block.cert-split {
+    flex-direction: column; 
+  }
+  .cert-split .edu-logo-wrapper {
+    flex: 0 0 auto;
+    width: 100%;
   }
 }
