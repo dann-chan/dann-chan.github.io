@@ -61,7 +61,7 @@ const CertificationsTab = () => {
         {/* BSc *************************/}
         <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 2 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(2)} title="Click to resize image">
-            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="University Logo" className="edu-logo-img" />
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQT3R6vUx_EVRKrteRwpMa4qAXilcT-qoMphwj-0zvnbeaA" alt="University Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
