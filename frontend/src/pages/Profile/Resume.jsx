@@ -7,7 +7,7 @@ const ResumeTab = ({ secretData }) => {
     title: "Senior Solutions Architect & Program Manager",
     location: "Toronto, Canada",
     avatar: "https://1drv.ms/i/c/3bb4dc98896970fa/IQQYj0XuBpvoTKDAmmVSYmPqAfLBL2MNbVUZ-NZixqOva9A",
-    bio: "5 years of specialized experience strategizing enterprise AI initiatives, securing major fundings, and gaining high-level executive recognition. Historically notable for designing and deploying the premier AI forecasting infrastructure for Bell's CCaaS. Proven adept at managing capital budgets and leading cross-functional engineering teams to deliver complex, multi-million dollar software projects.",
+    bio: "I am a Senior Technology Leader with over 15 years of experience across IT, DevOps, and enterprise AI. Over the past decade, I have led cross-functional engineering teams to deliver multi-million dollar software projects, including the premier AI forecasting infrastructure for Bell’s CCaaS. My core expertise lies in bridging the gap between executive strategy and technical execution—securing major funding and scaling advanced AI initiatives that drive business value.",
     
     skills: [ 
       "Technical Product Management", "Cross-functional Leadership", "Sprint Planning & Roadmapping", 
