@@ -32,6 +32,9 @@ const GlobalStatsSchema = new mongoose.Schema({
         type: Number,
     default:
         0
+    },
+    { 
+    versionKey: false 
     }
 });
 const GlobalStat = mongoose.model('GlobalStat', GlobalStatsSchema);
@@ -49,6 +52,9 @@ const VisitorIpSchema = new mongoose.Schema({
     visitHistory: {
         type: [Date],
         default: []
+    },
+    { 
+    versionKey: false 
     }
 });
 const Visitor = mongoose.model('Visitor', VisitorIpSchema);
