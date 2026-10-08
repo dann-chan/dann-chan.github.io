@@ -140,38 +140,48 @@ app.post('/api/log-view', async (req, res) => {
 });
 
 
-// Private analytical profiles
-app.get('/api/protected-data', authenticateToken, async(req, res) => {
+// Private view count
+app.get('/api/protected-data', authenticateToken, async (req, res) => {
     try {
-        // Query stats from cloud database endpoints
-        const rawHitMetric = await GlobalStat.findOne({
-            metricName: 'pageViews'
-        });
-        const fullIpLogs = await Visitor.find({}).sort({
-            lastVisit: -1
-        });
+        // 1. SAFELY FETCH ALL REGISTERED USER COLLECTION LOG PROFILES
+        const fullIpLogs = await Visitor.find({}).sort({ lastVisit: -1 }).lean();
 
-        const totalViews = rawHitMetric ? rawHitMetric.count : 0;
+        // 2. FETCH OVERALL VIEW METRIC CODES GRACEFULLY (FALLS BACK SAFE IF RECORD EMBED CODES LOOSE)
+        let totalViews = 0;
+        try {
+            const rawHitMetric = await GlobalStat.findOne({ metricName: 'pageViews' }).lean();
+            if (rawHitMetric && typeof rawHitMetric.count === 'number') {
+                totalViews = rawHitMetric.count;
+            } else {
+                // Alternative fallback calculation using data mapping arrays
+                totalViews = fullIpLogs.reduce((acc, curr) => acc + (curr.visitCount || 0), 0);
+            }
+        } catch (metricError) {
+            console.warn("Global tracking metric mapping buffered:", metricError.message);
+            totalViews = fullIpLogs.reduce((acc, curr) => acc + (curr.visitCount || 0), 0);
+        }
+
         const totalUnique = fullIpLogs.length;
 
+        // 3. RESPOND SUCCESSFULLY WITH CLEANLY SERIALIZED ANALYTICS ARRAYS
         return res.json({
             success: true,
             secretContent: {
                 bio: "Male",
                 email: "danny.chan@hotmail.com",
                 privateNote: "This data is securely pulled from the backend using a valid JWT.",
-
-                // Exposes raw calculations strictly behind the dashboard encryption barrier
                 totalPageViews: totalViews,
                 totalUniqueVisitors: totalUnique,
                 ipLogRegistry: fullIpLogs
             }
         });
     } catch (error) {
-        console.error("Database log retrieval failed:", error);
+        // Catches errors and keeps your application from throwing a generic 500 error
+        console.error("Database log retrieval failed cleanly:", error);
         return res.status(500).json({
             success: false,
-            message: "Data extraction error"
+            message: "Data extraction error",
+            errorDetails: error.message
         });
     }
 });
