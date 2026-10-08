@@ -63,26 +63,34 @@ const Visitor = mongoose.model('Visitor', VisitorIpSchema);
 // Verify the JWT token before serving data
 const authenticateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-
-    if (!token) {
-        return res.status(401).json({
-            success: false,
-            message: 'Access denied. No token provided.'
-        });
-    }
-
-    jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
-        if (err) {
-            return res.status(403).json({
+   
+    let token = null;
+        if (authHeader) {
+            if (authHeader.startsWith('Bearer ')) {
+                token = authHeader.split(' ')[1];
+            } else {
+                token = authHeader; // Fallback if proxy strips the word "Bearer"
+            }
+        }
+    
+        if (!token) {
+            return res.status(401).json({
                 success: false,
-                message: 'Invalid or expired token.'
+                message: 'Access denied. No token provided.'
             });
         }
-        req.user = user;
-        next();
-    });
-};
+    
+        jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+            if (err) {
+                return res.status(403).json({
+                    success: false,
+                    message: 'Invalid or expired token.'
+                });
+            }
+            req.user = user;
+            next();
+        });
+    };
 
 //Log into mongodb
 app.post('/api/log-view', async (req, res) => {
