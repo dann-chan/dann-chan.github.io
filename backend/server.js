@@ -85,7 +85,10 @@ const authenticateToken = (req, res, next) => {
 };
 
 // Log into mongodb
-app.post('/api/log-view', async(req, res) => {
+// backend/server.js
+// 🟢 REPLACE YOUR AP.POST('/API/LOG-VIEW') ENTIRELY WITH THIS CLEAN VERSION:
+
+app.post('/api/log-view', async (req, res) => {
     try {
         const clientIp = req.ip || req.headers['x-forwarded-for'] || 'unknown';
 
@@ -93,7 +96,7 @@ app.post('/api/log-view', async(req, res) => {
         await GlobalStat.findOneAndUpdate({
             metricName: 'pageViews'
         }, {
-             \ $inc: {
+            $inc: {
                 count: 1
             }
         }, {
@@ -105,12 +108,13 @@ app.post('/api/log-view', async(req, res) => {
         await Visitor.findOneAndUpdate({
             ipAddress: clientIp
         }, {
-             \ $inc: {
+            $inc: {
                 visitCount: 1
             },
-             \ (set: {
+            $set: {
                 lastVisit: new Date()
-            },  \ )setOnInsert: {
+            },
+            $setOnInsert: {
                 firstVisit: new Date()
             }
         }, {
@@ -129,6 +133,7 @@ app.post('/api/log-view', async(req, res) => {
         });
     }
 });
+
 
 // Private analytical profiles
 app.get('/api/protected-data', authenticateToken, async(req, res) => {
