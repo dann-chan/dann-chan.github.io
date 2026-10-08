@@ -84,10 +84,7 @@ const authenticateToken = (req, res, next) => {
     });
 };
 
-// Log into mongodb
-// backend/server.js
-// 🟢 REPLACE YOUR AP.POST('/API/LOG-VIEW') ENTIRELY WITH THIS CLEAN VERSION:
-
+//Log into mongodb
 app.post('/api/log-view', async (req, res) => {
     try {
         const clientIp = req.ip || req.headers['x-forwarded-for'] || 'unknown';
