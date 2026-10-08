@@ -15,7 +15,7 @@ const SiteInfoTab = () => {
       <div className="profile-section site-info-block">
         <h3>☁️ Hosting & Cloud Infrastructure</h3>
         <p className="site-info-text">
-          <strong>Frontend Web Platform:</strong> Hosted as a static application deployed through <strong>GitHub Pages</strong> edge servers, utilizing global CDN caching models for instantaneous load deliveries.
+          <strong>Frontend Web Platform:</strong> Hosted as a static application deployed through <a href="https://github.com/dann-chan/dann-chan.github.io" target="_blank" rel="noopener noreferrer" className="site-info-link">GitHub Pages</a> edge servers, utilizing global CDN caching models for instantaneous load deliveries.
         </p>
         <p className="site-info-text">
           <strong>Backend API Engine:</strong> Deployed as an isolated Node.js container instance running continuously on <strong>Render.com</strong> endpoints.
