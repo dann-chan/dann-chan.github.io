@@ -29,6 +29,12 @@ export default function LockedPage() {
         setToken('');
       });
     } else {
+      // Trigger the view count log
+      fetch('https://project-pvnd.onrender.com/api/log-view', { method: 'POST' })
+        .then(res => res.json())
+        .then(data => console.log('Visitor metric saved to cloud database:', data.success))
+        .catch(err => console.error('Analytics buffer delayed...'));
+      
       // Send a wake-up ping immediately
       fetch('https://project-pvnd.onrender.com/api/health')
         .then(res => res.json())
