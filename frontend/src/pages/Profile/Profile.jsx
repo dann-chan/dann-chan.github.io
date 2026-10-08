@@ -4,6 +4,7 @@ import BiographyTab from './Biography';
 import ResumeTab from './Resume';
 import ProjectsTab from './Projects';
 import CertificationsTab from './Certifications'; 
+import SiteInfoTab from './SiteInfo'; 
 import './Profile.css';
 
 const ProfilePage = ({ secretData, onLogout }) => {
@@ -17,6 +18,8 @@ const ProfilePage = ({ secretData, onLogout }) => {
         return <ProjectsTab />;
       case 'certifications':
         return <CertificationsTab />;
+      case 'siteinfo':
+        return <SiteInfoTab />; 
       case 'resume':
       default:
         return <ResumeTab secretData={secretData} />;
@@ -54,6 +57,12 @@ const ProfilePage = ({ secretData, onLogout }) => {
             onClick={() => setActiveTab('projects')}
           >
             💻 Projects
+          </button>
+          <button 
+            className={`sidebar-nav-btn ${activeTab === 'siteinfo' ? 'active' : ''}`}
+            onClick={() => setActiveTab('siteinfo')}
+          >
+            ℹ️ Site Info
           </button>
         </div>
 
