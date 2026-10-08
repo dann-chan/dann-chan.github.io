@@ -44,18 +44,11 @@ const VisitorIpSchema = new mongoose.Schema({
     },
     visitCount: {
         type: Number,
-    default:
-        0
+        default: 0
     },
-    firstVisit: {
-        type: Date,
-    default:
-        Date.now
-    },
-    lastVisit: {
-        type: Date,
-    default:
-        Date.now
+    visitHistory: {
+        type: [Date],
+        default: []
     }
 });
 const Visitor = mongoose.model('Visitor', VisitorIpSchema);
@@ -96,46 +89,29 @@ const authenticateToken = (req, res, next) => {
 app.post('/api/log-view', async (req, res) => {
     try {
         const clientIp = req.ip || req.headers['x-forwarded-for'] || 'unknown';
+        const currentTime = new Date();
 
-        // Increment raw overall hit metrics counter
-        await GlobalStat.findOneAndUpdate({
-            metricName: 'pageViews'
-        }, {
-            $inc: {
-                count: 1
-            }
-        }, {
-            upsert: true,
-            new: true
-        });
+        // Keep global stats counter exactly the same
+        await GlobalStat.findOneAndUpdate(
+            { metricName: 'pageViews' }, 
+            { $inc: { count: 1 } }, 
+            { upsert: true, new: true }
+        );
 
-        // Create or update this specific user IP profile
-        await Visitor.findOneAndUpdate({
-            ipAddress: clientIp
-        }, {
-            $inc: {
-                visitCount: 1
+        // Increment count
+        await Visitor.findOneAndUpdate(
+            { ipAddress: clientIp },
+            { 
+                $inc: { visitCount: 1 },
+                $push: { visitHistory: currentTime } // 
             },
-            $set: {
-                lastVisit: new Date()
-            },
-            $setOnInsert: {
-                firstVisit: new Date()
-            }
-        }, {
-            upsert: true,
-            new: true
-        });
+            { upsert: true, new: true }
+        );
 
-        return res.json({
-            success: true
-        });
+        return res.json({ success: true });
     } catch (error) {
         console.error("Database view logging failed:", error);
-        return res.status(500).json({
-            success: false,
-            message: "Logging failed internally"
-        });
+        return res.status(500).json({ success: false, message: "Logging failed internally" });
     }
 });
 
@@ -143,10 +119,10 @@ app.post('/api/log-view', async (req, res) => {
 // Private view count
 app.get('/api/protected-data', authenticateToken, async (req, res) => {
     try {
-        // 1. SAFELY FETCH ALL REGISTERED USER COLLECTION LOG PROFILES
+        // SAFELY FETCH ALL REGISTERED USER COLLECTION LOG PROFILES
         const fullIpLogs = await Visitor.find({}).sort({ lastVisit: -1 }).lean();
 
-        // 2. FETCH OVERALL VIEW METRIC CODES GRACEFULLY (FALLS BACK SAFE IF RECORD EMBED CODES LOOSE)
+        // FETCH OVERALL VIEW METRIC CODES GRACEFULLY (FALLS BACK SAFE IF RECORD EMBED CODES LOOSE)
         let totalViews = 0;
         try {
             const rawHitMetric = await GlobalStat.findOne({ metricName: 'pageViews' }).lean();
@@ -163,7 +139,7 @@ app.get('/api/protected-data', authenticateToken, async (req, res) => {
 
         const totalUnique = fullIpLogs.length;
 
-        // 3. RESPOND SUCCESSFULLY WITH CLEANLY SERIALIZED ANALYTICS ARRAYS
+        // RESPOND SUCCESSFULLY WITH CLEANLY SERIALIZED ANALYTICS ARRAYS
         return res.json({
             success: true,
             secretContent: {
