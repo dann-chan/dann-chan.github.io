@@ -1,0 +1,18 @@
+/* frontend/src/pages/Profile/SiteInfo.css */
+
+.tab-placeholder-view.site-info-header {
+  margin-bottom: 20px;
+}
+
+.profile-section.site-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+}
+
+.site-info-text {
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 15px;
+  margin: 0; 
+}
