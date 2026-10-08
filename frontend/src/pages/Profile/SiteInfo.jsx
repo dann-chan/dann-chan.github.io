@@ -1,5 +1,6 @@
 // frontend/src/pages/Profile/SiteInfo.jsx
 import React from 'react';
+import './SiteInfo.css';
 
 const SiteInfoTab = () => {
   return (
