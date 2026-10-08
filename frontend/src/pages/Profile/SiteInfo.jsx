@@ -4,11 +4,52 @@ import React from 'react';
 const SiteInfoTab = () => {
   return (
     <div className="profile-container">
-      <div className="tab-placeholder-view">
+      {/* Header *****************************************************************/}
+      <div className="tab-placeholder-view site-info-header">
         <h2>Site Info</h2>
-        <p> This panel can be used to display your portfolio's tech stack architecture, application release versions, system status metrics, or public system notices.</p>
+        <p>System architecture, development methodologies, and distribution platforms powering this portfolio workspace.</p>
+      </div>
+
+      {/* Hosting Section **********************************************************/}
+      <div className="profile-section site-info-block">
+        <h3>☁️ Hosting & Cloud Infrastructure</h3>
+        <p className="site-info-text">
+          <strong>Frontend Web Platform:</strong> Hosted as a static application deployed through <strong>GitHub Pages</strong> edge servers, utilizing global CDN caching models for instantaneous load deliveries.
+        </p>
+        <p className="site-info-text">
+          <strong>Backend API Engine:</strong> Deployed as an isolated Node.js container instance running continuously on <strong>Render.com</strong> endpoints.
+        </p>
+        <p className="site-info-text">
+          <strong>Persistent Database Core:</strong> Powered by a secure, remote <strong>MongoDB Atlas</strong> cloud cluster engine, dynamically cataloging live structural interaction pipelines and secure, private visitor IP data logs.
+        </p>
+      </div>
+
+      {/* Code Section ***************************************************************/}
+      <div className="profile-section site-info-block">
+        <h3>💻 Code Architecture & Engineering Stack</h3>
+        <p className="site-info-text">
+          <strong>User Interface Layers:</strong> Component-driven structural views engineered in pure, responsive <strong>React (JSX)</strong> with isolated state hooks management variables.
+        </p>
+        <p className="site-info-text">
+          <strong>Server & Middleware Frameworks:</strong> Microservices backend compiled via <strong>Express.js</strong> layers, utilizing stateless JSON Web Tokens (JWT) routing verifications and multi-tier network rate-limit security protection barriers.
+        </p>
+        <p className="site-info-text">
+          <strong>Database Drivers:</strong> Managed object documentation schemas bound directly to MongoDB instances using optimized <strong>Mongoose</strong> modeling layers with automated `.lean()` memory stream scaling.
+        </p>
+      </div>
+
+      {/* Design Section ***************************************************************/}
+      <div className="profile-section site-info-block">
+        <h3>🎨 Design Systems & Visual Identity</h3>
+        <p className="site-info-text">
+          <strong>Style Methodologies:</strong> Rendered using custom, un-compiled <strong>Semantic CSS Variables</strong> to establish a pristine dark-mode environment matching elite GitHub developer presentation layouts.
+        </p>
+        <p className="site-info-text">
+          <strong>Interactive Experience Protocols:</strong> Features completely isolated interface layouts including responsive side-by-side flex layouts for data structures, zero-truncation scaling, custom font-family stack selections, and automated vector path image expansion animations.
+        </p>
       </div>
     </div>
   );
 };
+
 export default SiteInfoTab;
