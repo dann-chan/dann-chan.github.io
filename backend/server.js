@@ -22,41 +22,44 @@ mongoose.connect(process.env.MONGODB_URI)
 .catch(err => console.error('MongoDB database connection error:', err));
 
 // Data schema layout
-const GlobalStatsSchema = new mongoose.Schema({
-    metricName: {
-        type: String,
-    default:
-        'pageViews'
-    },
-    count: {
-        type: Number,
-    default:
-        0
-    },
+const GlobalStatsSchema = new mongoose.Schema(
+    {
+        metricName: {
+            type: String,
+            default: 'pageViews'
+        },
+        count: {
+            type: Number,
+            default: 0
+        }
+    }, 
     { 
-    versionKey: false 
+        versionKey: false 
     }
-});
+);
 const GlobalStat = mongoose.model('GlobalStat', GlobalStatsSchema);
 
-const VisitorIpSchema = new mongoose.Schema({
-    ipAddress: {
-        type: String,
-        unique: true,
-        required: true
-    },
-    visitCount: {
-        type: Number,
-        default: 0
-    },
-    visitHistory: {
-        type: [Date],
-        default: []
-    },
+const VisitorIpSchema = new mongoose.Schema(
+    {
+        ipAddress: {
+            type: String,
+            unique: true,
+            required: true
+        },
+        visitCount: {
+            type: Number,
+            default: 0
+        },
+        visitHistory: {
+            type: [Date],
+            default: []
+        }
+    }, 
     { 
-    versionKey: false 
+        versionKey: false 
     }
-});
+);
+
 const Visitor = mongoose.model('Visitor', VisitorIpSchema);
 
 // Verify the JWT token before serving data
