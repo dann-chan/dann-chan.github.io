@@ -8,7 +8,7 @@ const SiteInfoTab = () => {
       {/* Header *****************************************************************/}
       <div className="tab-placeholder-view site-info-header">
         <h2>Site Info</h2>
-        <p>System architecture, development methodologies, and distribution platforms powering this portfolio workspace.</p>
+        <p>This site was 100% created by me with the assistance of AI and is hosted completely free on GitHub. The backend and database are also hosted for free.</p>
       </div>
 
       {/* Hosting Section **********************************************************/}
