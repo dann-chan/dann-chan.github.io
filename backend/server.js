@@ -101,7 +101,7 @@ app.post('/api/log-view', async (req, res) => {
         await GlobalStat.findOneAndUpdate(
             { metricName: 'pageViews' }, 
             { $inc: { count: 1 } }, 
-            { upsert: true, new: true }
+            { upsert: true, new: true, versionKey: false }
         );
 
         // Increment count
@@ -111,7 +111,7 @@ app.post('/api/log-view', async (req, res) => {
                 $inc: { visitCount: 1 },
                 $push: { visitHistory: currentTime } // 
             },
-            { upsert: true, new: true }
+            { upsert: true, new: true, versionKey: false }
         );
 
         return res.json({ success: true });
