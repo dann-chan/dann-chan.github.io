@@ -21,7 +21,7 @@ const SiteInfoTab = () => {
           <span className="site-info-label">Backend API Engine:</span> Deployed as an isolated Node.js container instance running continuously on <strong>Render.com</strong>.
         </p>
         <p className="site-info-text">
-          <span className="site-info-label">Database Core:</span> Powered by a secure, remote <strong>MongoDB Atlas</strong> cloud cluster engine, cataloging live structural interactions and private visitor IP data logs.
+          <span className="site-info-label">Database Core:</span> Powered by <strong>MongoDB Atlas</strong> cloud cluster engine, logging view counts and future user interactions.
         </p>
       </div>
 
@@ -43,7 +43,7 @@ const SiteInfoTab = () => {
      <div className="profile-section site-info-block">
         <h3>🎨 Design Systems</h3>
         <p className="site-info-text">
-          <span className="site-info-label">Design Architecture:</span> .
+          <span className="site-info-label">Design Architecture:</span>.
         </p>
       </div>
     </div>
