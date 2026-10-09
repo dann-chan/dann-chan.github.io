@@ -12,16 +12,16 @@ const SiteInfoTab = () => {
       </div>
 
       {/* Hosting Section **********************************************************/}
-      <div className="profile-section site-info-block">
+       <div className="profile-section site-info-block">
         <h3>☁️ Hosting & Cloud Infrastructure</h3>
         <p className="site-info-text">
-          <strong>Frontend Web Platform:</strong> Hosted as a static application deployed through <a href="https://github.com/dann-chan/dann-chan.github.io" target="_blank" rel="noopener noreferrer" className="site-info-link">GitHub Pages</a> edge servers, utilizing global CDN caching models for instantaneous load deliveries.
+          <span className="site-info-label">Frontend Web Platform:</span> Hosted as a static application deployed through <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="site-info-link">GitHub Pages</a>.
         </p>
         <p className="site-info-text">
-          <strong>Backend API Engine:</strong> Deployed as an isolated Node.js container instance running continuously on <strong>Render.com</strong> endpoints.
+          <span className="site-info-label">Backend API Engine:</span> Deployed as an isolated Node.js container instance running continuously on <strong>Render.com</strong>.
         </p>
         <p className="site-info-text">
-          <strong>Persistent Database Core:</strong> Powered by a secure, remote <strong>MongoDB Atlas</strong> cloud cluster engine, dynamically cataloging live structural interaction pipelines and secure, private visitor IP data logs.
+          <span className="site-info-label">Database Core:</span> Powered by a secure, remote <strong>MongoDB Atlas</strong> cloud cluster engine, cataloging live structural interactions and private visitor IP data logs.
         </p>
       </div>
 
@@ -29,24 +29,21 @@ const SiteInfoTab = () => {
       <div className="profile-section site-info-block">
         <h3>💻 Code Architecture & Engineering Stack</h3>
         <p className="site-info-text">
-          <strong>User Interface Layers:</strong> Component-driven structural views engineered in pure, responsive <strong>React (JSX)</strong> with isolated state hooks management variables.
+          <span className="site-info-label">User Interface Layers:</span> Designed in pure, responsive <strong>React (JSX)</strong> with isolated state hooks management variables.
         </p>
         <p className="site-info-text">
-          <strong>Server & Middleware Frameworks:</strong> Microservices backend compiled via <strong>Express.js</strong> layers, utilizing stateless JSON Web Tokens (JWT) routing verifications and multi-tier network rate-limit security protection barriers.
+          <span className="site-info-label">Server & Middleware Frameworks:</span> Microservices backend compiled via <strong>Express.js</strong> layers, utilizing stateless JSON Web Tokens (JWT) routing verifications and multi-tier network rate-limit security protection barriers.
         </p>
         <p className="site-info-text">
-          <strong>Database Drivers:</strong> Managed object documentation schemas bound directly to MongoDB instances using optimized <strong>Mongoose</strong> modeling layers with automated `.lean()` memory stream scaling.
+          <span className="site-info-label">Database Drivers:</span> MongoDB instances using optimized <strong>Mongoose</strong> layers with automated `.lean()` memory scaling as a workaround for the processing limit on free service. (Render will return error 500 if .lean is not used)
         </p>
       </div>
 
       {/* Design Section ***************************************************************/}
-      <div className="profile-section site-info-block">
-        <h3>🎨 Design Systems & Visual Identity</h3>
+     <div className="profile-section site-info-block">
+        <h3>🎨 Design Systems</h3>
         <p className="site-info-text">
-          <strong>Style Methodologies:</strong> Rendered using custom, un-compiled <strong>Semantic CSS Variables</strong> to establish a pristine dark-mode environment matching elite GitHub developer presentation layouts.
-        </p>
-        <p className="site-info-text">
-          <strong>Interactive Experience Protocols:</strong> Features completely isolated interface layouts including responsive side-by-side flex layouts for data structures, zero-truncation scaling, custom font-family stack selections, and automated vector path image expansion animations.
+          <span className="site-info-label">Design Architecture:</span> .
         </p>
       </div>
     </div>
