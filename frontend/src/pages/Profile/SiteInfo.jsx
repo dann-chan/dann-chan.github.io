@@ -32,7 +32,7 @@ const SiteInfoTab = () => {
           <span className="site-info-label">User Interface Layers:</span> Designed in pure, responsive <strong>React (JSX)</strong> with isolated state hooks management variables.
         </p>
         <p className="site-info-text">
-          <span className="site-info-label">Server & Middleware Frameworks:</span> Microservices backend compiled via <strong>Express.js</strong> layers, utilizing stateless JSON Web Tokens (JWT) routing verifications and multi-tier network rate-limit security protection barriers.
+          <span className="site-info-label">Server & Middleware Frameworks:</span> Microservices backend compiled via <strong>Express.js</strong> layers, utilizing stateless JSON Web Tokens (JWT) routing verifications as security protection barriers. Hosting the backend separately on Render can prevent the Environment Variables from being exposed on Github while allowing users to view my source code. 
         </p>
         <p className="site-info-text">
           <span className="site-info-label">Database Drivers:</span> MongoDB instances using optimized <strong>Mongoose</strong> layers with automated `.lean()` memory scaling as a workaround for the processing limit on free service. (Render will return error 500 if .lean is not used)
