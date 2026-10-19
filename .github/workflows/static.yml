@@ -1,9 +1,9 @@
-name: Deploy Frontend to GitHub Pages
+name: Deploy Frontend
 
 on:
   push:
     branches:
-      - main # Change to master if your primary branch is named master
+      - main
 
 permissions:
   contents: read
@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: 20
 
-      # 🛠️ FIX: Manually move into frontend, install, and run build
+      # Manually move into frontend, install, and run build
       - name: Build React App
         run: |
           cd frontend
@@ -39,7 +39,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 🛠️ FIX: Target the build folder directly relative to the runner workspace
+      # Target the build folder directly relative to the runner workspace
       - name: Upload production artifact
         uses: actions/upload-pages-artifact@v3
         with:
