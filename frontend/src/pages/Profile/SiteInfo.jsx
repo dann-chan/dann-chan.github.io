@@ -15,7 +15,7 @@ const SiteInfoTab = () => {
        <div className="profile-section site-info-block">
         <h3>☁️ Hosting & Cloud Infrastructure</h3>
         <p className="site-info-text">
-          <span className="site-info-label">Frontend Web Platform:</span> Hosted as a static application deployed through <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="site-info-link">GitHub Pages</a>.
+          <span className="site-info-label">Frontend Web Platform:</span> Hosted as a static application deployed through <a href="https://github.com/dann-chan/dann-chan.github.io" target="_blank" rel="noopener noreferrer" className="site-info-link">GitHub Pages</a>.
         </p>
         <p className="site-info-text">
           <span className="site-info-label">Backend API Engine:</span> Deployed as an isolated Node.js container instance running continuously on <strong>Render.com</strong>.
