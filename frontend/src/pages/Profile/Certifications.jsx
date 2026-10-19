@@ -1,5 +1,6 @@
 // frontend/src/pages/Profile/Certifications.jsx
 import React, { useState } from 'react';
+import './Certifications.css';
 
 const CertificationsTab = () => {
 
