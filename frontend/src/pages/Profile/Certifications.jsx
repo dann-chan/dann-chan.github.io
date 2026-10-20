@@ -78,9 +78,9 @@ const CertificationsTab = () => {
             </p>
           </div>
         </div>
-      </div>
       
-      {/* Highschool *************************/}
+      
+        {/* Highschool *************************/}
         <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 3 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(3)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRM4YCmk7koRYoMfAO3heFVAfYOgOG1qQPxuVXrnK492gk" alt="University Logo" className="edu-logo-img" />
@@ -93,13 +93,15 @@ const CertificationsTab = () => {
             <div className="education-row">
               <h5 className="edu-school">Milliken Mills High School</h5>
               <span className="edu-location">Markham, Canada</span>
-          </div>
-            <p className="edu-description">
-              Graduated as a high achiever during Ontario's historic <strong>double-cohort year</strong>, successfully securing competitive admissions into three top-tier institutions: York University, the University of Toronto, and Queen's University.
-            </p>
+            </div>
+              <p className="edu-description">
+                Graduated as a high achiever during Ontario's historic <strong>double-cohort year</strong>, successfully securing competitive admissions into three top-tier institutions: York University, the University of Toronto, and Queen's University.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+
+
       {/* Professional Certifications **************************************************************************/}
       <div className="profile-section">
         <h3>Professional Certifications</h3>
