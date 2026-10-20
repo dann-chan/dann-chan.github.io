@@ -79,14 +79,34 @@ const CertificationsTab = () => {
           </div>
         </div>
       </div>
-
+      
+      {/* Highschool *************************/}
+        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 3 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(3)} title="Click to resize image">
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRM4YCmk7koRYoMfAO3heFVAfYOgOG1qQPxuVXrnK492gk" alt="University Logo" className="edu-logo-img" />
+          </div>
+          <div className="cert-text-block">
+            <div className="education-row">
+              <h4 className="edu-degree">Ontario Secondary School Diploma</h4>
+              <span className="edu-year">1997 - 2002</span>
+            </div>
+            <div className="education-row">
+              <h5 className="edu-school">Milliken Mills High School</h5>
+              <span className="edu-location">Markham, Canada</span>
+          </div>
+            <p className="edu-description">
+              Graduated as a high achiever during Ontario's historic <strong>double-cohort year</strong>, successfully securing competitive admissions into three top-tier institutions: York University, the University of Toronto, and Queen's University.
+            </p>
+          </div>
+        </div>
+      </div>
       {/* Professional Certifications **************************************************************************/}
       <div className="profile-section">
         <h3>Professional Certifications</h3>
         
         {/* AWS *************************/}
-        <div className={`education-card-block cert-split-container ${expandedIndex === 3 ? 'expanded' : ''}`}>
-          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(3)} title="Click to resize image">
+        <div className={`education-card-block cert-split-container ${expandedIndex === 4 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(4)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="AWS Cloud Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
@@ -105,8 +125,8 @@ const CertificationsTab = () => {
         </div>
 
         {/* Meta *************************/}
-        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 4 ? 'expanded' : ''}`}>
-          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(4)} title="Click to resize image">
+        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 5 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(5)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="Meta Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
@@ -125,8 +145,8 @@ const CertificationsTab = () => {
         </div>
 
         {/* Tickle Inc. **************/}
-        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 5 ? 'expanded' : ''}`}>
-            <div className="edu-logo-wrapper" onClick={() => handleImageToggle(5)} title="Click to resize image">
+        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 6 ? 'expanded' : ''}`}>
+            <div className="edu-logo-wrapper" onClick={() => handleImageToggle(6)} title="Click to resize image">
               <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQS0vkA0Lhx-ToNJK1nUeo-eASvk75RVcKxmB7rXbN63Pps" alt="Tickle Logo" className="edu-logo-img" />
             </div>
             <div className="cert-text-block">
