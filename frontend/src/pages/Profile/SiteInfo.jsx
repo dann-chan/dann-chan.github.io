@@ -24,7 +24,7 @@ const SiteInfoTab = () => {
           <span className="site-info-label">Database Core:</span> Powered by <strong>MongoDB Atlas</strong> cloud cluster engine, logging view counts and future user interactions.
         </p>
          <p className="site-info-text">
-          <span className="site-info-label">Images:</span> Hosted on <strong>Onedrive</strong>, a free online service by microsoft.
+          <span className="site-info-label">Image:</span> Hosted on <strong>Onedrive</strong>, a free online service by Microsoft.
         </p>
       </div>
 
