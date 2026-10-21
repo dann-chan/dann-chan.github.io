@@ -106,42 +106,42 @@ const CertificationsTab = () => {
       <div className="profile-section">
         <h3>Professional Certifications</h3>
         
-        {/* AWS *************************/}
+        {/* YorkRegion Tech  *************************/}
         <div className={`education-card-block cert-split-container ${expandedIndex === 4 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(4)} title="Click to resize image">
-            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="AWS Cloud Logo" className="edu-logo-img" />
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRNlNsDJiH-SZ6kvT595WY2AcOkXXaV2JeHa5Vzd1kIgKg" alt="AWS Cloud Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
-              <h4 className="edu-degree">AWS Certified Solutions Architect – Associate</h4>
-              <span className="edu-year">Issued Nov 2025</span>
+              <h4 className="edu-degree">Certificate of Endorsement - Communications Technologies, Computer Interfacing & Robotics</h4>
+              <span className="edu-year">Issued June 2002</span>
             </div>
             <div className="education-row">
-              <h5 className="edu-school">Amazon Web Services (AWS)</h5>
-              <span className="edu-location">ID: AWS-123456</span>
+              <h5 className="edu-school">York Region Board of Education</h5>
+              <span className="edu-location">Milliken Mills High School</span>
             </div>
             <p className="edu-description">
-              Validated expertise in cloud computing design architectures, infrastructure optimization, high-availability deployments, and cost-efficient cloud resource provisioning.
+              Successfully completed more than 8 courses in Technological Studies.
             </p>
           </div>
         </div>
 
-        {/* Meta *************************/}
+        {/* YorkRegion Coop *************************/}
         <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 5 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(5)} title="Click to resize image">
-            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQQ2hU-U9W3TQo4xcdaV_gBQASbOI9s-lQpb6bMEb2ivV1E" alt="Meta Logo" className="edu-logo-img" />
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRLvoROPN0eTLL1Vl4dWzRGAaK0O8dCU67zEAxG7iNrvoI" alt="Meta Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
-              <h4 className="edu-degree">Meta Front-End Developer Professional Certificate</h4>
-              <span className="edu-year">Issued Aug 2024</span>
+              <h4 className="edu-degree">Co-op Education Certificate</h4>
+              <span className="edu-year">Issued June 2002</span>
             </div>
             <div className="education-row">
-              <h5 className="edu-school">Coursera / Meta</h5>
-              <span className="edu-location">Verified Credential</span>
+              <h5 className="edu-school">York Region Board of Education</h5>
+              <span className="edu-location">DMTI Spatial Inc.</span>
             </div>
             <p className="edu-description">
-              Comprehensive professional training track covering responsive user interfaces, React state management, web development frameworks, version control protocols, and component architectures.
+              Precise acquisition, processing, translation, and validation of aerial, satellite imagery datasets. This role focuses on the lifecycle of mapping municipal infrastructure, establishing topological network integrity, and executing advanced raster-to-vector spatial alignment workflows to support municipal planning.
             </p>
           </div>
         </div>
