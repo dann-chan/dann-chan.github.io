@@ -105,10 +105,30 @@ const CertificationsTab = () => {
       {/* Professional Certifications **************************************************************************/}
       <div className="profile-section">
         <h3>Professional Certifications</h3>
-        
-        {/* YorkRegion Tech  *************************/}
+
+         {/* PgPM Training  *************************/}
         <div className={`education-card-block cert-split-container ${expandedIndex === 4 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(4)} title="Click to resize image">
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRnZkMbnVIpSKHX1xgXUJNZARtorNCsOKEwXBGaVDG3nl4" alt="AWS Cloud Logo" className="edu-logo-img" />
+          </div>
+          <div className="cert-text-block">
+            <div className="education-row">
+              <h4 className="edu-degree">Certificate of Training - Program Management Professional (PgMP)</h4>
+              <span className="edu-year">Issued Jan 2026</span>
+            </div>
+            <div className="education-row">
+              <h5 className="edu-school">Project Management Institute</h5>
+              <span className="edu-location">PMI Code: 39620R8DJH</span>
+            </div>
+            <p className="edu-description">
+              Successfully completed 26 hours of PgMP training.
+            </p>
+          </div>
+        </div>
+        
+        {/* YorkRegion Tech  *************************/}
+        <div className={`education-card-block cert-split-container ${expandedIndex === 5 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(5)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRNlNsDJiH-SZ6kvT595WY2AcOkXXaV2JeHa5Vzd1kIgKg" alt="AWS Cloud Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
@@ -127,8 +147,8 @@ const CertificationsTab = () => {
         </div>
 
         {/* YorkRegion Coop *************************/}
-        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 5 ? 'expanded' : ''}`}>
-          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(5)} title="Click to resize image">
+        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 6 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(6)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRLvoROPN0eTLL1Vl4dWzRGAaK0O8dCU67zEAxG7iNrvoI" alt="Meta Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
@@ -147,8 +167,8 @@ const CertificationsTab = () => {
         </div>
 
         {/* Tickle Inc. **************/}
-        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 6 ? 'expanded' : ''}`}>
-            <div className="edu-logo-wrapper" onClick={() => handleImageToggle(6)} title="Click to resize image">
+        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 7 ? 'expanded' : ''}`}>
+            <div className="edu-logo-wrapper" onClick={() => handleImageToggle(7)} title="Click to resize image">
               <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQS0vkA0Lhx-ToNJK1nUeo-eASvk75RVcKxmB7rXbN63Pps" alt="Tickle Logo" className="edu-logo-img" />
             </div>
             <div className="cert-text-block">
