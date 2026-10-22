@@ -121,7 +121,7 @@ const CertificationsTab = () => {
               <span className="edu-location">PMI Code: 39620R8DJH</span>
             </div>
             <p className="edu-description">
-              Successfully completed 26 hours of PgMP training.
+               A globally recognized certification offered by the Project Management Institute (PMI) for senior-level managers. Unlike the PMP®, which focuses on single projects, this credential validates your ability to oversee multiple, interconnected projects to achieve strategic business goals. To qualify, candidates typically need a mix of a four-year degree alongside four years of project management and four years of program management experience.
             </p>
           </div>
         </div>
