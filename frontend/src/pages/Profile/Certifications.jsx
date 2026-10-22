@@ -127,8 +127,8 @@ const CertificationsTab = () => {
         </div>
 
         {/* CloudCampus DevOps  *************************/}
-        <div className={`education-card-block cert-split-container ${expandedIndex === 4 ? 'expanded' : ''}`}>
-          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(4)} title="Click to resize image">
+        <div className={`education-card-block cert-split-container ${expandedIndex === 5 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(5)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQR0Pwhsd3R8Tq9H_J75VOw2AUgYTI24v9XY7n40jcXbmDI" alt="AWS Cloud Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
@@ -147,8 +147,8 @@ const CertificationsTab = () => {
         </div>
         
         {/* YorkRegion Tech  *************************/}
-        <div className={`education-card-block cert-split-container ${expandedIndex === 5 ? 'expanded' : ''}`}>
-          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(5)} title="Click to resize image">
+        <div className={`education-card-block cert-split-container ${expandedIndex === 6 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(6)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRNlNsDJiH-SZ6kvT595WY2AcOkXXaV2JeHa5Vzd1kIgKg" alt="AWS Cloud Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
@@ -167,8 +167,8 @@ const CertificationsTab = () => {
         </div>
 
         {/* YorkRegion Coop *************************/}
-        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 6 ? 'expanded' : ''}`}>
-          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(6)} title="Click to resize image">
+        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 7 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(7)} title="Click to resize image">
             <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRLvoROPN0eTLL1Vl4dWzRGAaK0O8dCU67zEAxG7iNrvoI" alt="Meta Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
@@ -187,8 +187,8 @@ const CertificationsTab = () => {
         </div>
 
         {/* Tickle Inc. **************/}
-        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 7 ? 'expanded' : ''}`}>
-            <div className="edu-logo-wrapper" onClick={() => handleImageToggle(7)} title="Click to resize image">
+        <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 8 ? 'expanded' : ''}`}>
+            <div className="edu-logo-wrapper" onClick={() => handleImageToggle(8)} title="Click to resize image">
               <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQS0vkA0Lhx-ToNJK1nUeo-eASvk75RVcKxmB7rXbN63Pps" alt="Tickle Logo" className="edu-logo-img" />
             </div>
             <div className="cert-text-block">
