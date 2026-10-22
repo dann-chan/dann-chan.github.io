@@ -125,6 +125,26 @@ const CertificationsTab = () => {
             </p>
           </div>
         </div>
+
+        {/* CloudCampus DevOps  *************************/}
+        <div className={`education-card-block cert-split-container ${expandedIndex === 4 ? 'expanded' : ''}`}>
+          <div className="edu-logo-wrapper" onClick={() => handleImageToggle(4)} title="Click to resize image">
+            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQR0Pwhsd3R8Tq9H_J75VOw2AUgYTI24v9XY7n40jcXbmDI" alt="AWS Cloud Logo" className="edu-logo-img" />
+          </div>
+          <div className="cert-text-block">
+            <div className="education-row">
+              <h4 className="edu-degree">CloudCampus Certification - DevOps Upskilling Program</h4>
+              <span className="edu-year">Issued Jan 2024</span>
+            </div>
+            <div className="education-row">
+              <h5 className="edu-school">University of Ottawa</h5>
+              <span className="edu-location"><a href="https://certificate.bcdiploma.com/check/90E3B0B002D3DB213A2A97D93D173BF1CA39818195AA3B8F76196FA002BB3BD9c0VCSE9IN1RkbittQlNJWXJtSnFobndYVHk2WW9JdmV3dFA2c2dXVHk1ODhhRFRv" target="_blank" rel="noopener noreferrer" className="site-info-link">Verify here</a></span>
+            </div>
+            <p className="edu-description">
+               The CloudCampus DevOps Upskilling program is an FX Innovation initiative developed in collaboration with the uOttawa Professional Development Institute (PDI), aimed at developing and enhancing DevOps cloud expertise skills in Canada. This comprehensive program is designed to equip participants with the necessary knowledge and practical skills to excel in the field of DevOps and cloud technologies.
+            </p>
+          </div>
+        </div>
         
         {/* YorkRegion Tech  *************************/}
         <div className={`education-card-block cert-split-container ${expandedIndex === 5 ? 'expanded' : ''}`}>
@@ -174,7 +194,7 @@ const CertificationsTab = () => {
             <div className="cert-text-block">
               <div className="education-row">
                 <h4 className="edu-degree">Certificate of Intellectual Achievement</h4>
-                <span className="edu-year">Dec 2006</span>
+                <span className="edu-year">Issued Dec 2006</span>
               </div>
               <div className="education-row">
                 <h5 className="edu-school">Tickle Inc. (Intelligence Measurement Program)</h5>
