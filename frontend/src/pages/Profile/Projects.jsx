@@ -21,7 +21,7 @@ const ProjectsTab = () => {
               <h5 className="project-subtitle">Company / Client Instance</h5>
             </div>
             <p className="project-description">
-              Detail your program milestones, funding metrics, cross-functional leadership achievements, or core cloud infrastructure design deployments right here.
+              ...program milestones, funding metrics, cross-functional leadership achievements, or core cloud infrastructure design deployments.
             </p>
           </div>
         </div>
@@ -42,7 +42,7 @@ const ProjectsTab = () => {
               <h5 className="project-subtitle">Tech Stack: C/C++, Python, React, Node.js,, MongoDB, Automation Anywhere, Blueprism, Automate BPA</h5>
             </div>
             <p className="project-description">
-              Describe your software algorithms, automated pipelines, proprietary tools built from scratch, or database architecture configurations right here.
+              ...software algorithms, automated pipelines, proprietary tools built from scratch, or database architecture configurations.
             </p>
           </div>
         </div>
