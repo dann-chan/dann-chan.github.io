@@ -1,20 +1,63 @@
 /* frontend/src/pages/Profile/Projects.css */
 
-/* Placeholder Layout Settings ******************************************/
-.tab-placeholder-view {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 40px;
-  text-align: center;
+/* Content Structural Layouts *********************************************************/
+.project-card-block {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px; 
+}
+
+.project-card-block:last-child {
+  margin-bottom: 0;
+}
+
+.project-split-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Typography & Thematic Layout Rules *************************************************/
+.project-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
   color: var(--text-primary);
+  text-align: left;
 }
 
-.tab-placeholder-view h2 {
-  margin-top: 0;
-  color: var(--accent-color);
-}
-
-.tab-placeholder-view p {
+.project-year {
+  font-size: 13px;
   color: var(--text-secondary);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.project-subtitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-color);
+  text-align: left;
+}
+
+.project-description {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
