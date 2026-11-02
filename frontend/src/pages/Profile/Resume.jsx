@@ -9,7 +9,7 @@ const ResumeTab = ({ secretData }) => {
     phone: "Hidden",
     web: "Hidden",
     webUrl: "Hidden",
-    bio: "Hidden."
+    bio: "Hidden"
   };
 
   const profileData = {
