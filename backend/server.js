@@ -86,6 +86,7 @@ const PrivateInfoSchema = new mongoose.Schema(
         versionKey: false
     }
 );
+const PrivateInfo = mongoose.model('PrivateInfo', PrivateInfoSchema);
 
 // Verify the JWT token before serving data
 const authenticateToken = (req, res, next) => {
