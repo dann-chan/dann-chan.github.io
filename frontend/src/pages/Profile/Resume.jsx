@@ -5,11 +5,11 @@ const ResumeTab = ({ secretData }) => {
 
   
   const secureContact = secretData || {
-    email: "Hidden (Authenticate to view)",
-    phone: "Hidden (Authenticate to view)",
+    email: "Hidden",
+    phone: "Hidden",
     web: "Hidden",
-    webUrl: "#",
-    bio: "Loading professional bio details securely..."
+    webUrl: "Hidden",
+    bio: "Hidden."
   };
 
   const profileData = {
