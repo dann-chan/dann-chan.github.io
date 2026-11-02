@@ -62,6 +62,31 @@ const VisitorIpSchema = new mongoose.Schema(
 
 const Visitor = mongoose.model('Visitor', VisitorIpSchema);
 
+const PrivateInfoSchema = new mongoose.Schema(
+    {
+        email: String,
+        phone: String,
+        web: String,
+        webUrl: String,
+        bio: String,
+        references: [
+            {
+                name: String,
+                title: String,
+                company: String,
+                location: String,
+                phone: String,
+                email: String,
+                relationship: String
+            }
+        ]
+    },
+    {
+        collection: 'private_info', // Explicit collection mapping
+        versionKey: false
+    }
+);
+
 // Verify the JWT token before serving data
 const authenticateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
@@ -130,7 +155,8 @@ app.get('/api/protected-data', authenticateToken, async (req, res) => {
     try {
         // SAFELY FETCH ALL REGISTERED USER COLLECTION LOG PROFILES
         const fullIpLogs = await Visitor.find({}).sort({ lastVisit: -1 }).lean();
-
+        // FETCH SECURE RESUME INFO DIRECTLY FROM MONGODB
+        const secureProfile = await PrivateInfo.findOne({}).lean();
         // FETCH OVERALL VIEW METRIC CODES GRACEFULLY (FALLS BACK SAFE IF RECORD EMBED CODES LOOSE)
         let totalViews = 0;
         try {
@@ -147,13 +173,16 @@ app.get('/api/protected-data', authenticateToken, async (req, res) => {
         }
 
         const totalUnique = fullIpLogs.length;
-
-        // RESPOND SUCCESSFULLY WITH CLEANLY SERIALIZED ANALYTICS ARRAYS
+       // RESPOND SUCCESSFULLY WITH CLEANLY SERIALIZED ANALYTICS ARRAYS
         return res.json({
             success: true,
             secretContent: {
-                bio: "Male",
-                email: "danny.chan@hotmail.com",
+                bio: secureProfile?.bio || "hidden",
+                email: secureProfile?.email || "hidden", // Fallbacks if your db drops documents
+                phone: secureProfile?.phone || "hidden",
+                web: secureProfile?.web || "hidden",
+                webUrl: secureProfile?.webUrl || "hidden",
+                references: secureProfile?.references || [], // Embedded reference array
                 privateNote: "This data is securely pulled from the backend using a valid JWT.",
                 totalPageViews: totalViews,
                 totalUniqueVisitors: totalUnique,
