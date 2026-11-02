@@ -7,6 +7,10 @@ const ResumeTab = ({ secretData }) => {
     title: "Senior Solutions Architect & Program Manager",
     location: "Toronto, Canada",
     avatar: "https://1drv.ms/i/c/3bb4dc98896970fa/IQQYj0XuBpvoTKDAmmVSYmPqAfLBL2MNbVUZ-NZixqOva9A",
+    email: "chan.danny@hotmail.com",
+    phone: "647-239-1036",
+    web: "dann-chan.github.io",
+    webUrl: "https://dann-chan.github.io/",
     bio: "I am a Senior Technology Leader with over 15 years of experience across IT, DevOps, and enterprise AI. Over the past decade, I have led cross-functional engineering teams to deliver multi-million dollar software projects, including the premier AI forecasting infrastructure for Bell’s CCaaS. My core expertise lies in bridging the gap between executive strategy and technical execution—securing major funding and scaling advanced AI initiatives that drive business value.",
     
     skills: [ 
@@ -131,12 +135,12 @@ const ResumeTab = ({ secretData }) => {
       
       {/*Contact Section *****************************************************************************/}
       <section className="profile-contact">
-        <span className="contact-item"><strong>Email:</strong> chan.danny@hotmail.com</span>
+        <span className="contact-item"><strong>Email:</strong> {profileData.email}</span>
         <span className="contact-divider">•</span>
-        <span className="contact-item"><strong>Phone:</strong> 647-239-1036</span>
+        <span className="contact-item"><strong>Phone:</strong> {profileData.phone}</span>
         <span className="contact-divider">•</span>
         <span className="contact-item">
-          <strong>Web:</strong> <a href="https://dann-chan.github.io" target="_blank" rel="noreferrer">dann-chan.github.io</a>
+          <strong>Web:</strong> <a href={profileData.webUrl} target="_blank" rel="noreferrer">{profileData.web}</a>
         </span>
       </section>
       
