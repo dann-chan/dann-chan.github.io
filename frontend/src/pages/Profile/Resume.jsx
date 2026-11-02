@@ -3,21 +3,23 @@ import React from 'react';
 
 const ResumeTab = ({ secretData }) => {
 
-  
-  const secureContact = secretData || {
-    email: "Hidden",
-    phone: "Hidden",
-    web: "Hidden",
-    webUrl: "Hidden",
-    bio: "Hidden"
-  };
-
+  // Loading Private data
+  if (!secretData) {
+    return (
+      <div className="profile-container loading-state">
+        <h2>Loading private profile data securely...</h2>
+        <p>Please authenticate or wait a moment for the database connection.</p>
+      </div>
+    );
+  }
+ 
   const profileData = {
     name: "Danny Chan, M.Eng",
     title: "Senior Solutions Architect & Program Manager",
     location: "Toronto, Canada",
     avatar: "https://1drv.ms/i/c/3bb4dc98896970fa/IQQYj0XuBpvoTKDAmmVSYmPqAfLBL2MNbVUZ-NZixqOva9A",
-     // Controlled via database
+    
+    // Data protected in MongoDB
     email: secureContact.email,
     phone: secureContact.phone,
     web: secureContact.web,
