@@ -2,16 +2,27 @@
 import React from 'react';
 
 const ResumeTab = ({ secretData }) => {
+
+  
+  const secureContact = secretData || {
+    email: "Hidden (Authenticate to view)",
+    phone: "Hidden (Authenticate to view)",
+    web: "Hidden",
+    webUrl: "#",
+    bio: "Loading professional bio details securely..."
+  };
+
   const profileData = {
     name: "Danny Chan, M.Eng",
     title: "Senior Solutions Architect & Program Manager",
     location: "Toronto, Canada",
     avatar: "https://1drv.ms/i/c/3bb4dc98896970fa/IQQYj0XuBpvoTKDAmmVSYmPqAfLBL2MNbVUZ-NZixqOva9A",
-    email: "chan.danny@hotmail.com",
-    phone: "647-239-1036",
-    web: "dann-chan.github.io",
-    webUrl: "https://dann-chan.github.io/",
-    bio: "I am a Senior Technology Leader with over 15 years of experience across IT, DevOps, and enterprise AI. Over the past decade, I have led cross-functional engineering teams to deliver multi-million dollar software projects, including the premier AI forecasting infrastructure for Bell’s CCaaS. My core expertise lies in bridging the gap between executive strategy and technical execution—securing major funding and scaling advanced AI initiatives that drive business value.",
+     // Controlled via database
+    email: secureContact.email,
+    phone: secureContact.phone,
+    web: secureContact.web,
+    webUrl: secureContact.webUrl,
+    bio: secureContact.bio,
     
     skills: [ 
       "Technical Product Management", "Cross-functional Leadership", "Sprint Planning & Roadmapping", 
