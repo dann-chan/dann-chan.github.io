@@ -174,16 +174,16 @@ app.get('/api/protected-data', authenticateToken, async (req, res) => {
         }
 
         const totalUnique = fullIpLogs.length;
-       // RESPOND SUCCESSFULLY WITH CLEANLY SERIALIZED ANALYTICS ARRAYS
+       // RESPOND SUCCESSFULLY 
         return res.json({
             success: true,
-            secretContent: {
+            privateData: {
                 bio: secureProfile?.bio || "hidden",
-                email: secureProfile?.email || "hidden", // Fallbacks if your db drops documents
+                email: secureProfile?.email || "hidden", 
                 phone: secureProfile?.phone || "hidden",
                 web: secureProfile?.web || "hidden",
                 webUrl: secureProfile?.webUrl || "hidden",
-                references: secureProfile?.references || [], // Embedded reference array
+                references: secureProfile?.references || [], 
                 privateNote: "This data is securely pulled from the backend using a valid JWT.",
                 totalPageViews: totalViews,
                 totalUniqueVisitors: totalUnique,
