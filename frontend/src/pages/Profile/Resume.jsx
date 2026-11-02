@@ -1,10 +1,10 @@
 // frontend/src/pages/Profile/resume.jsx
 import React from 'react';
 
-const ResumeTab = ({ secretData }) => {
+const ResumeTab = ({ privateData }) => {
 
-  // Loading Private data
-  if (!secretData) {
+  // Loading Private Data from MongoDB
+  if (!privateData) {
     return (
       <div className="profile-container loading-state">
         <h2>Loading private profile data securely...</h2>
@@ -20,12 +20,12 @@ const ResumeTab = ({ secretData }) => {
     avatar: "https://1drv.ms/i/c/3bb4dc98896970fa/IQQYj0XuBpvoTKDAmmVSYmPqAfLBL2MNbVUZ-NZixqOva9A",
     
     // Data protected in MongoDB
-    email: secureContact.email,
-    phone: secureContact.phone,
-    web: secureContact.web,
-    webUrl: secureContact.webUrl,
-    bio: secureContact.bio,
-    references: secretData.references,
+    email: privateData.email,
+    phone: privateData.phone,
+    web: privateData.web,
+    webUrl: privateData.webUrl,
+    bio: privateData.bio,
+    references: privateData.references,
     
     skills: [ 
       "Technical Product Management", "Cross-functional Leadership", "Sprint Planning & Roadmapping", 
