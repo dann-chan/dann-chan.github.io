@@ -23,6 +23,7 @@ const ResumeTab = ({ secretData }) => {
     web: secureContact.web,
     webUrl: secureContact.webUrl,
     bio: secureContact.bio,
+    references: secretData.references,
     
     skills: [ 
       "Technical Product Management", "Cross-functional Leadership", "Sprint Planning & Roadmapping", 
@@ -30,7 +31,7 @@ const ResumeTab = ({ secretData }) => {
       "Frontend (React & Next.js)", "Backend (Node.js & Python)", "Databases (SQL, MongoDB)", 
       "Cloud & DevOps (AWS, Docker, Git)", "System Architecture", "API Design & Integration"
     ],
-    
+
     experience: [ 
       { 
         company: "Bell Canada",
@@ -94,37 +95,8 @@ const ResumeTab = ({ secretData }) => {
         year: "2026",
         location: "Online"
       } 
-    ],
-    
-    references: [
-      {
-        name: "Nancy Abergel",
-        title: "Director - Client Service Operations & Experience",
-        company: "Bell Canada",
-        location: "Montreal, QC",
-        phone: "(514) 391-5297",
-        email: "nancy.abergel@bell.ca",
-        relationship: "Former direct supervisor."
-      },
-      {
-        name: "Queenie Mok",
-        title: "Director - Operational Planning & Technology",
-        company: "Bell Canada",
-        location: "Toronto, ON",
-        phone: "(416) 770-4020",
-        email: "queenie.mok@bell.ca",
-        relationship: "Former coworker."
-      },
-      {
-        name: "Ravi Shankar",
-        title: "Senior Consultant",
-        company: "CIBC",
-        location: "Toronto, ON",
-        phone: "(647) 973-6465",
-        email: "ravisg28@gmail.com",
-        relationship: "Former coworker."
-      }
     ]
+    
   };
 
   return (
