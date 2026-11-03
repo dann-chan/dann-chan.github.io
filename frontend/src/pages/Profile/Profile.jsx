@@ -17,7 +17,7 @@ const ProfilePage = ({ privateData, onLogout }) => {
       case 'projects':
         return <ProjectsTab />;
       case 'certifications':
-        return <CertificationsTab privateURLs={privateData?.certifications} />;
+        return <CertificationsTab privateURLs={privateData} />;
       case 'siteinfo':
         return <SiteInfoTab />; 
       case 'resume':
