@@ -140,8 +140,8 @@ export default function LockedPage() {
         </div>
         
         <h1 className="lock-title">Profile Locked</h1>
-        <p className="lock-subtitle">Please enter the passcode to unlock Danny's profile.</p>
-        <p className="lock-note">(May take up to 30 seconds if the server fell asleep)</p>
+        <p className="lock-subtitle">Passcode is on my resume.</p>
+        <p className="lock-note">(May take up to 10 seconds if the server fell asleep)</p>
         
         <form onSubmit={handleSubmit} className="lock-form">
           <div className="lock-input-wrapper">
