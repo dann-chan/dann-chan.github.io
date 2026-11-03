@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI)
 .then(() => console.log('Connected securely to Free MongoDB Cloud Database'))
 .catch(err => console.error('MongoDB database connection error:', err));
 
-// Data schema layout
+// track general visit count collection
 const GlobalStatsSchema = new mongoose.Schema(
     {
         metricName: {
@@ -39,6 +39,7 @@ const GlobalStatsSchema = new mongoose.Schema(
 );
 const GlobalStat = mongoose.model('GlobalStat', GlobalStatsSchema);
 
+// track visitor by IP collection
 const VisitorIpSchema = new mongoose.Schema(
     {
         ipAddress: {
@@ -59,9 +60,9 @@ const VisitorIpSchema = new mongoose.Schema(
         versionKey: false 
     }
 );
-
 const Visitor = mongoose.model('Visitor', VisitorIpSchema);
 
+// privateData collection
 const PrivateInfoSchema = new mongoose.Schema(
     {
         email: String,
@@ -87,6 +88,20 @@ const PrivateInfoSchema = new mongoose.Schema(
     }
 );
 const PrivateInfo = mongoose.model('PrivateInfo', PrivateInfoSchema);
+
+// privateURLs collection
+const PrivateURLsSchema = new mongoose.Schema({
+    certifications: [
+        {
+            name: String,
+            credentialUrl: String
+        }
+    ]
+}, { 
+    collection: 'privateURLs', 
+    versionKey: false 
+});
+const PrivateURLs = mongoose.model('PrivateURLs', PrivateURLsSchema);
 
 // Verify the JWT token before serving data
 const authenticateToken = (req, res, next) => {
@@ -120,7 +135,7 @@ const authenticateToken = (req, res, next) => {
         });
     };
 
-//Log into mongodb
+// Log into mongodb
 app.post('/api/log-view', async (req, res) => {
     try {
         const clientIp = req.ip || req.headers['x-forwarded-for'] || 'unknown';
@@ -154,11 +169,18 @@ app.post('/api/log-view', async (req, res) => {
 // Private view count
 app.get('/api/protected-data', authenticateToken, async (req, res) => {
     try {
+        // 1. Fetch IP logs, profile data, AND your URLs collection simultaneously
+        const [fullIpLogs, secureProfile, urlPack] = await Promise.all([
+            Visitor.find({}).sort({ lastVisit: -1 }).lean(),
+            PrivateInfo.findOne({}).lean(),
+            PrivateURLs.findOne({}).lean() // 👈 🌟 Fetches your new collection document
+        ]);
         // SAFELY FETCH ALL REGISTERED USER COLLECTION LOG PROFILES
-        const fullIpLogs = await Visitor.find({}).sort({ lastVisit: -1 }).lean();
+        //const fullIpLogs = await Visitor.find({}).sort({ lastVisit: -1 }).lean();
         // FETCH SECURE RESUME INFO DIRECTLY FROM MONGODB
-        const secureProfile = await PrivateInfo.findOne({}).lean();
-        // FETCH OVERALL VIEW METRIC CODES GRACEFULLY (FALLS BACK SAFE IF RECORD EMBED CODES LOOSE)
+        //const secureProfile = await PrivateInfo.findOne({}).lean();
+        
+        // FETCH OVERALL VIEW METRIC 
         let totalViews = 0;
         try {
             const rawHitMetric = await GlobalStat.findOne({ metricName: 'pageViews' }).lean();
@@ -184,6 +206,7 @@ app.get('/api/protected-data', authenticateToken, async (req, res) => {
                 web: secureProfile?.web || "hidden",
                 webUrl: secureProfile?.webUrl || "hidden",
                 references: secureProfile?.references || [], 
+                certifications: urlPack?.certifications || [],
                 privateNote: "This data is securely pulled from the backend using a valid JWT.",
                 totalPageViews: totalViews,
                 totalUniqueVisitors: totalUnique,
