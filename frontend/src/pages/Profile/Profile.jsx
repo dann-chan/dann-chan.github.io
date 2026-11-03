@@ -7,7 +7,7 @@ import CertificationsTab from './Certifications';
 import SiteInfoTab from './SiteInfo'; 
 import './Profile.css';
 
-const ProfilePage = ({ secretData, onLogout }) => {
+const ProfilePage = ({ privateData, onLogout }) => {
   const [activeTab, setActiveTab] = useState('resume');
 
   const renderMainContent = () => {
@@ -22,7 +22,7 @@ const ProfilePage = ({ secretData, onLogout }) => {
         return <SiteInfoTab />; 
       case 'resume':
       default:
-        return <ResumeTab secretData={secretData} />;
+        return <ResumeTab privateData={privateData} />;
     }
   };
 
