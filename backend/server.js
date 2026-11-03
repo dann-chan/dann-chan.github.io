@@ -8,13 +8,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 app.set('trust proxy', true);
-app.use(cors({
-    origin: ['http://localhost:3000', 'https://dann-chan.github.io'], // Replace with your frontend domains
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
-//app.use(cors());
+app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
