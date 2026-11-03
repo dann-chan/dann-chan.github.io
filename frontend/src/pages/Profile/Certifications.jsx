@@ -2,10 +2,18 @@
 import React, { useState } from 'react';
 import './Certifications.css';
 
-const CertificationsTab = () => {
-
+const CertificationsTab = ({ privateURLs }) => {
   const [expandedIndex, setExpandedIndex] = useState(null);
-
+  // Guard clause: If privateURLs hasn't arrived yet from MongoDB, show a loading state
+  if (!privateURLs) {
+    return (
+      <div className="profile-container loading-state">
+        <h2>Loading secure credential assets...</h2>
+        <p>Please authenticate or wait a moment for the database connection.</p>
+      </div>
+    );
+  }
+  
   const handleImageToggle = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
@@ -18,7 +26,7 @@ const CertificationsTab = () => {
         <h3>Recognitions</h3>      
         <div className={`education-card-block cert-split-container ${expandedIndex === 0 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(0)} title="Click to resize image">
-            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQSCokXo4y_mR7YpTraa3HOPAWRclPLHWxpDKvGCiqjRtV8" alt="Company Logo" className="edu-logo-img" />
+            <img src={privateURLs.ceoRecognitionLogoUrl} alt="Company Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -42,7 +50,7 @@ const CertificationsTab = () => {
          {/* MEng *************************/}
         <div className={`education-card-block cert-split-container ${expandedIndex === 1 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(1)} title="Click to resize image">
-            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQSJZfz_PKsbQryI3Ih68S2dAZNEnqTo5COkmYBdOX4kvec" alt="University Logo" className="edu-logo-img" />
+            <img src={privateURLs.mengLogoUrl} alt="University Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -62,7 +70,7 @@ const CertificationsTab = () => {
         {/* BSc *************************/}
         <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 2 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(2)} title="Click to resize image">
-            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQT3R6vUx_EVRKrteRwpMa4qAXilcT-qoMphwj-0zvnbeaA" alt="University Logo" className="edu-logo-img" />
+            <img src={privateURLs.bscLogoUrl} alt="University Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -83,7 +91,7 @@ const CertificationsTab = () => {
         {/* Highschool *************************/}
         <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 3 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(3)} title="Click to resize image">
-            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRM4YCmk7koRYoMfAO3heFVAfYOgOG1qQPxuVXrnK492gk" alt="University Logo" className="edu-logo-img" />
+            <img src={privateURLs.highschoolLogoUrl} alt="University Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -109,7 +117,7 @@ const CertificationsTab = () => {
          {/* PgPM Training  *************************/}
         <div className={`education-card-block cert-split-container ${expandedIndex === 4 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(4)} title="Click to resize image">
-            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRnZkMbnVIpSKHX1xgXUJNZARtorNCsOKEwXBGaVDG3nl4" alt="AWS Cloud Logo" className="edu-logo-img" />
+            <img src={privateURLs.pgmpTrainingLogoUrl} alt="Cert Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -129,7 +137,7 @@ const CertificationsTab = () => {
         {/* CloudCampus DevOps  *************************/}
         <div className={`education-card-block cert-split-container ${expandedIndex === 5 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(5)} title="Click to resize image">
-            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQR0Pwhsd3R8Tq9H_J75VOw2AUgYTI24v9XY7n40jcXbmDI" alt="AWS Cloud Logo" className="edu-logo-img" />
+            <img src={privateURLs.cloudCampusDevopsLogoUrl} alt="Cert Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -138,7 +146,7 @@ const CertificationsTab = () => {
             </div>
             <div className="education-row">
               <h5 className="edu-school">University of Ottawa</h5>
-              <span className="edu-location"><a href="https://certificate.bcdiploma.com/check/90E3B0B002D3DB213A2A97D93D173BF1CA39818195AA3B8F76196FA002BB3BD9c0VCSE9IN1RkbittQlNJWXJtSnFobndYVHk2WW9JdmV3dFA2c2dXVHk1ODhhRFRv" target="_blank" rel="noopener noreferrer" className="site-info-link">Verify here</a></span>
+              <span className="edu-location"><a href={privateURLs.uOttawaDevopsVerificationUrl} target="_blank" rel="noopener noreferrer" className="site-info-link">Verify here</a></span>
             </div>
             <p className="edu-description">
                The CloudCampus DevOps Upskilling program is an FX Innovation initiative developed in collaboration with the uOttawa Professional Development Institute (PDI), aimed at developing and enhancing DevOps cloud expertise skills in Canada. This comprehensive program is designed to equip participants with the necessary knowledge and practical skills to excel in the field of DevOps and cloud technologies.
@@ -149,7 +157,7 @@ const CertificationsTab = () => {
         {/* YorkRegion Tech  *************************/}
         <div className={`education-card-block cert-split-container ${expandedIndex === 6 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(6)} title="Click to resize image">
-            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRNlNsDJiH-SZ6kvT595WY2AcOkXXaV2JeHa5Vzd1kIgKg" alt="AWS Cloud Logo" className="edu-logo-img" />
+            <img src={privateURLs.yorkRegionTechLogoUrl} alt="Cert Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -169,7 +177,7 @@ const CertificationsTab = () => {
         {/* YorkRegion Coop *************************/}
         <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 7 ? 'expanded' : ''}`}>
           <div className="edu-logo-wrapper" onClick={() => handleImageToggle(7)} title="Click to resize image">
-            <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQRLvoROPN0eTLL1Vl4dWzRGAaK0O8dCU67zEAxG7iNrvoI" alt="Meta Logo" className="edu-logo-img" />
+            <img src={privateURLs.yorkRegionCoopLogoUrl} alt="Cert Logo" className="edu-logo-img" />
           </div>
           <div className="cert-text-block">
             <div className="education-row">
@@ -189,7 +197,7 @@ const CertificationsTab = () => {
         {/* Tickle Inc. **************/}
         <div className={`education-card-block credential-divider cert-split-container ${expandedIndex === 8 ? 'expanded' : ''}`}>
             <div className="edu-logo-wrapper" onClick={() => handleImageToggle(8)} title="Click to resize image">
-              <img src="https://1drv.ms/i/c/3bb4dc98896970fa/IQS0vkA0Lhx-ToNJK1nUeo-eASvk75RVcKxmB7rXbN63Pps" alt="Tickle Logo" className="edu-logo-img" />
+              <img src={privateURLs.tickleLogoUrl} alt="Tickle Logo" className="edu-logo-img" />
             </div>
             <div className="cert-text-block">
               <div className="education-row">
