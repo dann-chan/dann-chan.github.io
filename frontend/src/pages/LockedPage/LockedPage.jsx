@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import ProfilePage from '../Profile/Profile.jsx'; 
 import './LockedPage.css'; 
 
+const PROFILE_AVATAR = "https://1drv.ms/i/c/3bb4dc98896970fa/IQQxZz02waACQaAglisH9uPmAfnbFOJXB-41AdSBAv-EfcI";
+
 export default function LockedPage() {
   const [passcode, setPasscode] = useState('');
   const [token, setToken] = useState(sessionStorage.getItem('page_token') || '');
@@ -129,7 +131,13 @@ export default function LockedPage() {
   return (
     <div className="lock-container">
       <div className="lock-card">
-        <div className="lock-icon">{isLockedOut ? '⏳' : '🔒'}</div>
+        
+        {/* <div className="lock-icon">{isLockedOut ? '⏳' : '🔒'}</div> */}
+        <div className={`lock-avatar-wrapper ${isLockedOut ? 'locked-out-avatar' : ''}`}>
+          <img src={PROFILE_AVATAR} alt="Danny Chan" className="lock-profile-img" />
+          {isLockedOut && <div className="lock-avatar-overlay">⏳</div>}
+        </div>
+        
         <h1 className="lock-title">Profile Locked</h1>
         <p className="lock-subtitle">Please enter the passcode to unlock Danny's profile.</p>
         <p className="lock-note">(May take up to 30 seconds if the server fell asleep)</p>
