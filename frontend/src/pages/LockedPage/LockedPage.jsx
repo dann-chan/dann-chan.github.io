@@ -23,7 +23,7 @@ export default function LockedPage() {
         if (!res.ok) throw new Error('Expired');
         return res.json();
       })
-      .then(data => setPrivateData(data.secretContent))
+      .then(data => setPrivateData(data.privateData))
       .catch(() => {
         sessionStorage.removeItem('page_token');
         setToken('');
