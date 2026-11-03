@@ -175,11 +175,7 @@ app.get('/api/protected-data', authenticateToken, async (req, res) => {
             PrivateInfo.findOne({}).lean(),
             PrivateURLs.findOne({}).lean() // 👈 🌟 Fetches your new collection document
         ]);
-        // SAFELY FETCH ALL REGISTERED USER COLLECTION LOG PROFILES
-        //const fullIpLogs = await Visitor.find({}).sort({ lastVisit: -1 }).lean();
-        // FETCH SECURE RESUME INFO DIRECTLY FROM MONGODB
-        //const secureProfile = await PrivateInfo.findOne({}).lean();
-        
+           
         // FETCH OVERALL VIEW METRIC 
         let totalViews = 0;
         try {
