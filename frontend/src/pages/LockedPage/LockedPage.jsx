@@ -6,7 +6,7 @@ import './LockedPage.css';
 export default function LockedPage() {
   const [passcode, setPasscode] = useState('');
   const [token, setToken] = useState(sessionStorage.getItem('page_token') || '');
-  const [secretData, setSecretData] = useState('');
+  const [privateData, setPrivateData] = useState('');
   const [error, setError] = useState('');
   const [isLockedOut, setIsLockedOut] = useState(false); 
   const [countdown, setCountdown] = useState(0); 
@@ -23,7 +23,7 @@ export default function LockedPage() {
         if (!res.ok) throw new Error('Expired');
         return res.json();
       })
-      .then(data => setSecretData(data.secretContent))
+      .then(data => setPrivateData(data.secretContent))
       .catch(() => {
         sessionStorage.removeItem('page_token');
         setToken('');
@@ -108,14 +108,14 @@ export default function LockedPage() {
   const handleLogout = () => {
     sessionStorage.removeItem('page_token');
     setToken('');
-    setSecretData('');
+    setPrivateData('');
     setPasscode('');
     setShowPassword(false);
   };
 
   // IF UNLOCKED
-  if (token && secretData) {
-    return <ProfilePage secretData={secretData} onLogout={handleLogout} />;
+  if (token && privateData) {
+    return <ProfilePage privateData={privateData} onLogout={handleLogout} />;
   }
 
   // Helper handling of dynamic button label variants
