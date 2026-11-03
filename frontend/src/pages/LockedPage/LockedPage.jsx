@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import ProfilePage from '../Profile/Profile.jsx'; 
 import './LockedPage.css'; 
 
-const PROFILE_AVATAR = "https://1drv.ms/i/c/3bb4dc98896970fa/IQQkFucRjrXjSqUdXd_s7tSwAbF-EdykEUaPX-ZUxjd9a6Q";
+const PROFILE_AVATAR = "https://1drv.ms/i/c/3bb4dc98896970fa/IQQYj0XuBpvoTKDAmmVSYmPqAfLBL2MNbVUZ-NZixqOva9A";
+//"https://1drv.ms/i/c/3bb4dc98896970fa/IQQkFucRjrXjSqUdXd_s7tSwAbF-EdykEUaPX-ZUxjd9a6Q";
 
 export default function LockedPage() {
   const [passcode, setPasscode] = useState('');
