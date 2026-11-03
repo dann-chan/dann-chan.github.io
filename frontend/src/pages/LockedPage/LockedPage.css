@@ -35,8 +35,8 @@
 /* Compact Avatar Wrapper */
 .lock-avatar-wrapper {
   position: relative;
-  width: 45px;         /* Scaled down footprint */
-  height: 45px;        
+  width: 100px;         /* Scaled down footprint */
+  height: 100px;        
   margin: 0 auto 16px auto;
   border-radius: 50%;  /* Perfect circular frame */
   border: 2px solid var(--lock-accent); /* Blue accent border matching your theme */
