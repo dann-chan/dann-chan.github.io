@@ -97,6 +97,15 @@ const ResumeTab = ({ privateData }) => {
         year: "2026",
         location: "Online"
       } 
+    ],
+    
+    publications: [
+      {
+        title: "Publication Name Placeholder",
+        publisher: "Publisher Name Placeholder",
+        year: "2025",
+        country: "Canada"
+      }
     ]
     
   };
@@ -167,6 +176,21 @@ const ResumeTab = ({ privateData }) => {
                 <div className="education-row">
                   <h5 className="edu-school">{edu.school}</h5>
                   {edu.location && <span className="edu-location">{edu.location}</span>}
+                </div>
+              </div>
+            ))}
+          </section>
+          <section className="profile-section">
+            <h3>Publication</h3>
+            {profileData.publications.map((pub, index) => (
+              <div key={index} className="education-card-block">
+                <div className="education-row">
+                  <h4 className="edu-degree">{pub.title}</h4>
+                  <span className="edu-year">{pub.year}</span>
+                </div>
+                <div className="education-row">
+                  <h5 className="edu-school">{pub.publisher}</h5>
+                  {pub.country && <span className="edu-location">{pub.country}</span>}
                 </div>
               </div>
             ))}
